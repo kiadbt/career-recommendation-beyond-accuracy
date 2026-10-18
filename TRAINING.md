@@ -1,6 +1,6 @@
 # Training and evaluation from source data
 
-The commands below rebuild the catalogue, frozen encoder features, person partitions,
+The commands below rebuild the catalogue, fixed encoder features, person partitions,
 training examples, neural predictors, count baselines and saved rankings. They do not
 load the authors' fitted predictors. “From scratch” refers to the career predictors;
 the study uses the specified **pretrained** MiniLM encoder, which is not pretrained again.
@@ -75,8 +75,8 @@ Training refuses a nonempty output directory. A time-limit interruption retains
 the best checkpoint, epoch records and last full state; it is not a successful run.
 There is no automatic budget extension or automatic resume. `run.json` records
 completion and resource use; individual training records report stopping adequacy.
-For a cheap functional check, use `train_models.py --max-epochs 1` in a different
-directory. Such a check does not reproduce the paper's converged results.
+For a short functional check, use `train_models.py --max-epochs 1` in a different
+directory. Such a check does not reproduce the paper's full training runs.
 
 ## Score and evaluate
 
@@ -128,7 +128,7 @@ python code/verify_rebuild.py --run-dir private/run --output private/run/verific
 `REBUILD_REFERENCE.json` contains hashes of the original array contents and trained
 tensor contents, together with aggregate learning curves and selected epochs. The
 checker verifies nine input archives and all eleven neural fits. Use `--inputs-only`
-before training for a cheaper check. Reference hashes disclose neither user-level
+to verify the prepared inputs before training. Reference hashes disclose neither user-level
 arrays nor model weights. A mismatch requires investigation; hardware-dependent
 numerical differences should be reported rather than silently labelled an exact match.
 
@@ -138,8 +138,7 @@ This workflow covers training all reported predictor architectures, rebuilding i
 for all three datasets, the original six-model confirmation panel, fixed fusion,
 external saved rankings and five-seed chronological analysis. It does not claim that
 one command regenerates every exploratory ablation, diagnostic, figure or manuscript
-layout. Archived aggregate exports remain available separately. Read the validation
-receipt for exactly which full runs and outputs have been checked locally.
+layout. Archived aggregate exports remain available separately. See TRAINING_VALIDATION.json for the full runs and outputs verified locally.
 
 The encoder and source data retain their upstream terms. Extracted STEP baseline
 classes retain their MIT notice in `THIRD_PARTY_STEP_LICENSE.txt`; this does not license

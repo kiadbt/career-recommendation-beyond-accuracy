@@ -23,8 +23,8 @@ The first command verifies package hashes and aggregate arithmetic and exports t
 | --- | --- |
 | `aggregate_results/` | Original model comparisons, fusion, external transfer, self-attention and sensitivity estimates |
 | `extended_results/` | Cross-source diagnostics, composition and occupational-grouping sensitivity |
-| `chronological_results/` | Five-seed chronological results, selection records, protocol and verification receipts |
-| `supplementary_tables/` | Ten detailed tables from the condensed supplement, with a file index and interpretation notes |
+| `chronological_results/` | Five-seed chronological results, selection records, protocol and verification records |
+| `supplementary_tables/` | Ten detailed supplementary tables, with a file index and interpretation notes |
 | `code/` | Source-data preparation, predictor training, scoring and statistical reports |
 | `TRAINING.md` | Commands to rebuild inputs, train all predictor architectures and rerun analyses |
 | `SOURCE_ASSETS.json` | Pinned source downloads and checksums |
@@ -32,7 +32,7 @@ The first command verifies package hashes and aggregate arithmetic and exports t
 | `protocols/` | Recorded analysis protocols |
 | `PROVENANCE.json` | Source URLs, revisions and required-asset hashes |
 | `REPRODUCING.txt` | Local input schemas, commands and tested scope |
-| `VALIDATION.json` | Historical local validation receipt; its publication flag describes the pre-release candidate |
+| `VALIDATION.json` | Historical local validation record; its publication flag refers to the version before public release |
 
 `cohort_shift` and `Delta_cohort` in archived machine-readable records correspond to **change in model gap** in the manuscript. Existing field names are retained for compatibility. All supplementary table values preserve the displayed precision of the Word tables; JSON result files retain greater precision.
 
@@ -67,7 +67,7 @@ PyTorch build separately. Older preprocessing/analysis requirement files describ
 earlier tool environments; do not combine all requirement files. Aggregate checks
 still need only the Python standard library and no GPU.
 
-Original and post hoc analyses are distinguished in the protocols. KARRIEREWEGE uses ordered singleton experiences; the other sources use quarter-level sets. Cross-source person independence is not verified. Historical validation receipts describe checks with private local assets; publication of a receipt does not distribute those assets or make the checks independently reproducible.
+Original and post hoc analyses are distinguished in the protocols. KARRIEREWEGE uses ordered singleton experiences; the other sources use quarter-level sets. Cross-source person independence is not verified. Historical validation records describe checks with private local assets; publication of a record does not distribute those assets or make the checks independently reproducible.
 
 ## Citation and permissions
 

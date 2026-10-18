@@ -1,8 +1,8 @@
 SUPPLEMENTARY TABLES
 Career Recommendation Beyond Overall Accuracy: Model Comparisons and Broader Occupational Retrieval
 
-Read with Supplementary_Information_1_condensed_2026_10_18.docx. These files are submission attachments, independent of the planned GitHub repository.
-CSV encoding: UTF-8 with BOM. First row contains column headings. Values and precision are transcribed exactly from the previous Word tables; no new estimates have been calculated. Unicode minus signs and confidence intervals are retained as displayed text. Blank cells, if any, remain blank.
+Read with Supplementary_Information_1.docx. These aggregate tables accompany the manuscript and are also available in the public reproducibility repository.
+CSV encoding: UTF-8 with BOM. First row contains column headings. Values use the reporting precision specified in Supplementary Information 1. Unicode minus signs and confidence intervals are retained as displayed text. Blank cells, if any, remain blank.
 
 FILE INDEX
 Supplementary_Table_S7.csv — Table S7 Sensitivity of fusion performance to ranking length, input depth and neural weight on JobHop
@@ -23,6 +23,6 @@ S13: KW denotes KARRIEREWEGE; KW unique is its unique nonmatching sample. Agreem
 S14: outcome groups retain complete targets; values are descriptive conditional fusion NDCG differences. Decorte has only one mixed-target history. See Section S13.
 S15: R is recency; N is BiLSTM. Standardisation uses pooled repeat-only/unseen-positive weights 0.292802/0.707198. This does not control all cross-source differences. See Section S14.
 S20: two existing BiLSTM seeds; fusion NDCG contrasts are descriptive. See Section S15.
-S26/S27: five chronological training seeds; neural means BiLSTM. Change in model gap is the unseen-positive neural-minus-recency contrast minus the overall contrast. Repeated/broader recall contrasts use their eligible subsets. See Section S16 for the paired inference, sample sizes and uncertainty estimates retained in Word.
+S26/S27: five chronological training seeds; neural means BiLSTM. Change in model gap is the unseen-positive neural-minus-recency contrast minus the overall contrast. Repeated/broader recall contrasts use their eligible subsets. See Section S16 for the paired inference, sample sizes and uncertainty estimates reported in Supplementary Information 1.
 
 All files contain aggregate study results; no individual career histories are included.

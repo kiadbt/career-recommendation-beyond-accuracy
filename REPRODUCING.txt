@@ -51,7 +51,7 @@ NDCG uses all target occupations, ideal discount for min(10,target count),
 and the complete fixed catalogue. Seed metrics are averaged per history,
 not logits. Unseen-positive means at least one target absent from all history.
 
-D. Frozen scoring (no training)
+D. Scoring with fixed models (no training)
 python code/predict_recency.py --queries jobhop_queries.npz --counts count_models.npz --out recency_predictions.npz
 python code/infer_attention.py --queries jobhop_queries.npz --checkpoint-42 seed_42_best.pt --checkpoint-43 seed_43_best.pt --selection attention_selection.json --device cuda --seconds 180 --out attention_predictions.npz
 The count cache contains fitting-only popularity and transition arrays.
@@ -74,7 +74,7 @@ Python 3.12, PyTorch 2.7.1+cu126, NVIDIA RTX 2060, two CPU numerical threads.
 See ENVIRONMENT.json for exact versions observed in validation; the two requirements files distinguish preprocessing from inference/metrics. GPU training is not part of these commands.
 VALIDATION.json records actual tests, including raw-source reconstruction,
 saved-ranking agreement, and aggregate/bootstrap replay. Tests use private local
-assets; their inclusion in a verification receipt does not redistribute them.
+assets; their inclusion in a verification record does not redistribute them.
 The original study's full training workflow is described in the supplement;
 its training budget, selection history and external/local asset dependencies
 are not replaced by these inference scripts. A new training run may differ.
