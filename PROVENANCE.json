@@ -59,5 +59,6 @@
     "work\\step_replication\\cohort_comparison\\count_models.npz": "c0239c929f167e5cf90b320e93a98b608421c2cc3f131fce6e13e39000cdb10d",
     "work\\attention_baseline\\seed_42_best.pt": "65ad86719f1feadc5baeac02fb0a73b28145905b59be633432d9368ef0766fe3",
     "work\\attention_baseline\\seed_43_best.pt": "5b99c963d454fb656cc3e07e74df98162ea77a93b1499d59d3c1de3e4bd37a9a"
-  }
+  },
+  "historical_asset_hash_note": "The historical file hashes identify the original serialized assets. Rebuilt files can differ in archive/container bytes; use REBUILD_REFERENCE.json to verify array and tensor contents."
 }

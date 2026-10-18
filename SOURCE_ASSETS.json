@@ -1,0 +1,65 @@
+{
+  "note": "Review upstream dataset/model terms before downloading. Raw and derived person-level assets remain local.",
+  "files": [
+    {
+      "name": "JobHop_v2_train.parquet",
+      "url": "https://huggingface.co/datasets/aida-ugent/JobHop/resolve/766921f12b66eb886841393ab0400321e0373cb4/JobHop_v2_train.parquet",
+      "sha256": "b2c0073161f4ac237d3b6b522a338f0d44a6860d2e7f4bdc613a71b8a1663a90",
+      "bytes": 9213302
+    },
+    {
+      "name": "JobHop_v2_test.parquet",
+      "url": "https://huggingface.co/datasets/aida-ugent/JobHop/resolve/766921f12b66eb886841393ab0400321e0373cb4/JobHop_v2_test.parquet",
+      "sha256": "5d07a51386ec2df136ba7ceb280602bad702de6160e6b50550a280462f3e01ac",
+      "bytes": 1176715
+    },
+    {
+      "name": "JobHop_v2_val.parquet",
+      "url": "https://huggingface.co/datasets/aida-ugent/JobHop/resolve/766921f12b66eb886841393ab0400321e0373cb4/JobHop_v2_val.parquet",
+      "sha256": "8794f96ea7ff5525de02bc0c010f9c56b1db7ec85c0718128f8ec26c70372be0",
+      "bytes": 1182855
+    },
+    {
+      "name": "decorte_train.csv",
+      "url": "https://huggingface.co/datasets/TechWolf/anonymous-working-histories/resolve/300f78901132de9c388e8b4101d84d148f9ba65a/train.csv",
+      "sha256": "16e637b3c8addc29f5cd2ae8cba124f6e7f7fb074ab90af5d43f10cc905fcc34",
+      "bytes": 5663074
+    },
+    {
+      "name": "decorte_test.csv",
+      "url": "https://huggingface.co/datasets/TechWolf/anonymous-working-histories/resolve/300f78901132de9c388e8b4101d84d148f9ba65a/test.csv",
+      "sha256": "8d8560980cf3b85ee350a86225a6679a273958e445f4197199e795f2683fc26b",
+      "bytes": 758658
+    },
+    {
+      "name": "karrierewege_test.zip",
+      "url": "https://huggingface.co/datasets/ElenaSenger/Karrierewege/resolve/e69e98a0f00f75a7ea1a1fb09936ae46105f6c8d/karierrewege_test.zip",
+      "sha256": "bea35f3ff82435b8b6c21e1a66248a43128cd64a204ba872a23657b2c415dde9",
+      "bytes": 89001981
+    },
+    {
+      "name": "taxonomy.zip",
+      "url": "https://taxonomy.tabiya.tech/downloads/68934bcdfb6143f42db01d21-export-689357cdfb6143f42db01fa8.zip",
+      "sha256": "dcc2393e7559b188990c14a9703fcdd8cd9de8d8464ef60c269e86f213c22add",
+      "bytes": 5805917
+    },
+    {
+      "name": "encoder/config.json",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/config.json",
+      "sha256": "6300193cb75e01cf80c96decef7187dfb33094d97cc1490b7ead6ff134476e4e",
+      "bytes": 645
+    },
+    {
+      "name": "encoder/model.safetensors",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/model.safetensors",
+      "sha256": "eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b",
+      "bytes": 470641600
+    },
+    {
+      "name": "encoder/tokenizer.json",
+      "url": "https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2/resolve/e8f8c211226b894fcb81acc59f3b34ba3efd5f42/tokenizer.json",
+      "sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8",
+      "bytes": 9081518
+    }
+  ]
+}

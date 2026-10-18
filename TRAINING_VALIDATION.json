@@ -1,0 +1,634 @@
+{
+  "scope": "Local reconstruction from checksum-pinned raw source files and a fixed pretrained encoder; all career predictors fitted from random initialization. Existing local dependency environments were reused; no independent clean-machine installation or independent-group replication is claimed.",
+  "inputs": {
+    "catalogue_embeddings": {
+      "exact_common_arrays": true,
+      "differences": {},
+      "checked_arrays": [
+        "history",
+        "target"
+      ],
+      "histories": null
+    },
+    "original_training": {
+      "exact_common_arrays": true,
+      "differences": {},
+      "checked_arrays": [
+        "bank_history_embeddings",
+        "bank_members",
+        "bank_size",
+        "finals",
+        "fit",
+        "history_blocks",
+        "length",
+        "pid",
+        "prefix_weight",
+        "screen",
+        "target_block",
+        "tune"
+      ],
+      "histories": 139740
+    },
+    "confirmation": {
+      "exact_common_arrays": true,
+      "differences": {},
+      "checked_arrays": [
+        "bank_history_embeddings",
+        "bank_members",
+        "bank_size",
+        "history_blocks",
+        "length",
+        "pid",
+        "target_block"
+      ],
+      "histories": 28993
+    },
+    "fusion": {
+      "exact_common_arrays": true,
+      "differences": {},
+      "checked_arrays": [
+        "bank_history_embeddings",
+        "bank_members",
+        "bank_size",
+        "history_blocks",
+        "length",
+        "pid",
+        "target_block"
+      ],
+      "histories": 28875
+    },
+    "decorte": {
+      "exact_common_arrays": true,
+      "differences": {},
+      "checked_arrays": [
+        "bank_history_embeddings",
+        "bank_members",
+        "bank_size",
+        "history_blocks",
+        "length",
+        "pid",
+        "target_block"
+      ],
+      "histories": 227
+    },
+    "chronological_training": {
+      "exact_common_arrays": true,
+      "differences": {},
+      "checked_arrays": [
+        "bank_history_embeddings",
+        "bank_members",
+        "bank_size",
+        "fit",
+        "history_blocks",
+        "history_dates",
+        "length",
+        "pid",
+        "prefix_weight",
+        "target_block",
+        "target_date",
+        "tune"
+      ],
+      "histories": 91494
+    },
+    "chronological_confirmation": {
+      "exact_common_arrays": true,
+      "differences": {},
+      "checked_arrays": [
+        "bank_history_embeddings",
+        "bank_members",
+        "bank_size",
+        "history_blocks",
+        "history_dates",
+        "length",
+        "pid",
+        "prefix_weight",
+        "target_block",
+        "target_date"
+      ],
+      "histories": 9551
+    },
+    "chronological_fusion": {
+      "exact_common_arrays": true,
+      "differences": {},
+      "checked_arrays": [
+        "bank_history_embeddings",
+        "bank_members",
+        "bank_size",
+        "history_blocks",
+        "history_dates",
+        "length",
+        "pid",
+        "prefix_weight",
+        "target_block",
+        "target_date"
+      ],
+      "histories": 9671
+    },
+    "karrierewege": {
+      "exact_common_arrays": true,
+      "differences": {},
+      "checked_arrays": [
+        "bank_history_embeddings",
+        "bank_members",
+        "bank_size",
+        "history_blocks",
+        "length",
+        "pid",
+        "sensitivity_indices",
+        "target_block"
+      ],
+      "histories": 56536
+    }
+  },
+  "training": {
+    "panel_MLP_42": {
+      "epochs_checked": 27,
+      "expected_epochs": 27,
+      "training_trace_exact": true,
+      "complete": true,
+      "best_checkpoint_tensors_exact": true
+    },
+    "panel_MLP_43": {
+      "epochs_checked": 41,
+      "expected_epochs": 41,
+      "training_trace_exact": true,
+      "complete": true,
+      "best_checkpoint_tensors_exact": true
+    },
+    "panel_BiLSTM_42": {
+      "epochs_checked": 39,
+      "expected_epochs": 39,
+      "training_trace_exact": true,
+      "complete": true,
+      "best_checkpoint_tensors_exact": true
+    },
+    "panel_BiLSTM_43": {
+      "epochs_checked": 24,
+      "expected_epochs": 24,
+      "training_trace_exact": true,
+      "complete": true,
+      "best_checkpoint_tensors_exact": true
+    },
+    "panel_attention_42": {
+      "epochs_checked": 22,
+      "expected_epochs": 22,
+      "training_trace_exact": true,
+      "complete": true,
+      "best_checkpoint_tensors_exact": true
+    },
+    "panel_attention_43": {
+      "epochs_checked": 18,
+      "expected_epochs": 18,
+      "training_trace_exact": true,
+      "complete": true,
+      "best_checkpoint_tensors_exact": true
+    },
+    "chronological_BiLSTM_42": {
+      "epochs_checked": 39,
+      "expected_epochs": 39,
+      "training_trace_exact": true,
+      "complete": true,
+      "best_checkpoint_tensors_exact": true
+    },
+    "chronological_BiLSTM_43": {
+      "epochs_checked": 26,
+      "expected_epochs": 26,
+      "training_trace_exact": true,
+      "complete": true,
+      "best_checkpoint_tensors_exact": true
+    },
+    "chronological_BiLSTM_44": {
+      "epochs_checked": 28,
+      "expected_epochs": 28,
+      "training_trace_exact": true,
+      "complete": true,
+      "best_checkpoint_tensors_exact": true
+    },
+    "chronological_BiLSTM_45": {
+      "epochs_checked": 24,
+      "expected_epochs": 24,
+      "training_trace_exact": true,
+      "complete": true,
+      "best_checkpoint_tensors_exact": true
+    },
+    "chronological_BiLSTM_46": {
+      "epochs_checked": 28,
+      "expected_epochs": 28,
+      "training_trace_exact": true,
+      "complete": true,
+      "best_checkpoint_tensors_exact": true
+    }
+  },
+  "predictions": {
+    "passed": true,
+    "checks": {
+      "confirmation/top_Popularity": {
+        "exact": true,
+        "histories": 28993,
+        "ranking_depth": 10
+      },
+      "confirmation/top_PersonalRecency": {
+        "exact": true,
+        "histories": 28993,
+        "ranking_depth": 10
+      },
+      "confirmation/top_QuarterTransition": {
+        "exact": true,
+        "histories": 28993,
+        "ranking_depth": 10
+      },
+      "confirmation/top_HistoryNeighbour": {
+        "exact": true,
+        "histories": 28993,
+        "ranking_depth": 10
+      },
+      "confirmation/top_MLP_42": {
+        "exact": true,
+        "histories": 28993,
+        "ranking_depth": 10
+      },
+      "confirmation/top_MLP_43": {
+        "exact": true,
+        "histories": 28993,
+        "ranking_depth": 10
+      },
+      "confirmation/top_BiLSTM_42": {
+        "exact": true,
+        "histories": 28993,
+        "ranking_depth": 10
+      },
+      "confirmation/top_BiLSTM_43": {
+        "exact": true,
+        "histories": 28993,
+        "ranking_depth": 10
+      },
+      "fusion/top_PersonalRecency": {
+        "exact": true,
+        "histories": 28875,
+        "ranking_depth": 10
+      },
+      "fusion/top_BiLSTM_42": {
+        "exact": true,
+        "histories": 28875,
+        "ranking_depth": 10
+      },
+      "fusion/top_Fusion_BiLSTM_42": {
+        "exact": true,
+        "histories": 28875,
+        "ranking_depth": 10
+      },
+      "fusion/top_BiLSTM_43": {
+        "exact": true,
+        "histories": 28875,
+        "ranking_depth": 10
+      },
+      "fusion/top_Fusion_BiLSTM_43": {
+        "exact": true,
+        "histories": 28875,
+        "ranking_depth": 10
+      },
+      "decorte/top_PersonalRecency": {
+        "exact": true,
+        "histories": 227,
+        "ranking_depth": 10
+      },
+      "decorte/top_BiLSTM_42": {
+        "exact": true,
+        "histories": 227,
+        "ranking_depth": 10
+      },
+      "decorte/top_Fusion_BiLSTM_42": {
+        "exact": true,
+        "histories": 227,
+        "ranking_depth": 10
+      },
+      "decorte/top_BiLSTM_43": {
+        "exact": true,
+        "histories": 227,
+        "ranking_depth": 10
+      },
+      "decorte/top_Fusion_BiLSTM_43": {
+        "exact": true,
+        "histories": 227,
+        "ranking_depth": 10
+      },
+      "karrierewege/top_PersonalRecency": {
+        "exact": true,
+        "histories": 56536,
+        "ranking_depth": 10
+      },
+      "karrierewege/top_BiLSTM_42": {
+        "exact": true,
+        "histories": 56536,
+        "ranking_depth": 10
+      },
+      "karrierewege/top_Fusion_BiLSTM_42": {
+        "exact": true,
+        "histories": 56536,
+        "ranking_depth": 10
+      },
+      "karrierewege/top_BiLSTM_43": {
+        "exact": true,
+        "histories": 56536,
+        "ranking_depth": 10
+      },
+      "karrierewege/top_Fusion_BiLSTM_43": {
+        "exact": true,
+        "histories": 56536,
+        "ranking_depth": 10
+      },
+      "chronological_confirmation/top_Popularity": {
+        "exact": true,
+        "histories": 9551,
+        "ranking_depth": 10
+      },
+      "chronological_confirmation/top_PersonalRecency": {
+        "exact": true,
+        "histories": 9551,
+        "ranking_depth": 10
+      },
+      "chronological_confirmation/top_QuarterTransition": {
+        "exact": true,
+        "histories": 9551,
+        "ranking_depth": 10
+      },
+      "chronological_confirmation/top_BiLSTM_42": {
+        "exact": true,
+        "histories": 9551,
+        "ranking_depth": 10
+      },
+      "chronological_confirmation/top_Fusion_BiLSTM_42": {
+        "exact": true,
+        "histories": 9551,
+        "ranking_depth": 10
+      },
+      "chronological_confirmation/top_BiLSTM_43": {
+        "exact": true,
+        "histories": 9551,
+        "ranking_depth": 10
+      },
+      "chronological_confirmation/top_Fusion_BiLSTM_43": {
+        "exact": true,
+        "histories": 9551,
+        "ranking_depth": 10
+      },
+      "chronological_confirmation/top_BiLSTM_44": {
+        "exact": true,
+        "histories": 9551,
+        "ranking_depth": 10
+      },
+      "chronological_confirmation/top_Fusion_BiLSTM_44": {
+        "exact": true,
+        "histories": 9551,
+        "ranking_depth": 10
+      },
+      "chronological_confirmation/top_BiLSTM_45": {
+        "exact": true,
+        "histories": 9551,
+        "ranking_depth": 10
+      },
+      "chronological_confirmation/top_Fusion_BiLSTM_45": {
+        "exact": true,
+        "histories": 9551,
+        "ranking_depth": 10
+      },
+      "chronological_confirmation/top_BiLSTM_46": {
+        "exact": true,
+        "histories": 9551,
+        "ranking_depth": 10
+      },
+      "chronological_confirmation/top_Fusion_BiLSTM_46": {
+        "exact": true,
+        "histories": 9551,
+        "ranking_depth": 10
+      },
+      "chronological_fusion/top_Popularity": {
+        "exact": true,
+        "histories": 9671,
+        "ranking_depth": 10
+      },
+      "chronological_fusion/top_PersonalRecency": {
+        "exact": true,
+        "histories": 9671,
+        "ranking_depth": 10
+      },
+      "chronological_fusion/top_QuarterTransition": {
+        "exact": true,
+        "histories": 9671,
+        "ranking_depth": 10
+      },
+      "chronological_fusion/top_BiLSTM_42": {
+        "exact": true,
+        "histories": 9671,
+        "ranking_depth": 10
+      },
+      "chronological_fusion/top_Fusion_BiLSTM_42": {
+        "exact": true,
+        "histories": 9671,
+        "ranking_depth": 10
+      },
+      "chronological_fusion/top_BiLSTM_43": {
+        "exact": true,
+        "histories": 9671,
+        "ranking_depth": 10
+      },
+      "chronological_fusion/top_Fusion_BiLSTM_43": {
+        "exact": true,
+        "histories": 9671,
+        "ranking_depth": 10
+      },
+      "chronological_fusion/top_BiLSTM_44": {
+        "exact": true,
+        "histories": 9671,
+        "ranking_depth": 10
+      },
+      "chronological_fusion/top_Fusion_BiLSTM_44": {
+        "exact": true,
+        "histories": 9671,
+        "ranking_depth": 10
+      },
+      "chronological_fusion/top_BiLSTM_45": {
+        "exact": true,
+        "histories": 9671,
+        "ranking_depth": 10
+      },
+      "chronological_fusion/top_Fusion_BiLSTM_45": {
+        "exact": true,
+        "histories": 9671,
+        "ranking_depth": 10
+      },
+      "chronological_fusion/top_BiLSTM_46": {
+        "exact": true,
+        "histories": 9671,
+        "ranking_depth": 10
+      },
+      "chronological_fusion/top_Fusion_BiLSTM_46": {
+        "exact": true,
+        "histories": 9671,
+        "ranking_depth": 10
+      },
+      "confirmation/top_attention_42": {
+        "exact": true,
+        "histories": 28993,
+        "ranking_depth": 10
+      },
+      "confirmation/top_attention_43": {
+        "exact": true,
+        "histories": 28993,
+        "ranking_depth": 10
+      },
+      "decorte/top_attention_42": {
+        "exact": true,
+        "histories": 227,
+        "ranking_depth": 10
+      },
+      "decorte/top_attention_43": {
+        "exact": true,
+        "histories": 227,
+        "ranking_depth": 10
+      },
+      "karrierewege/top_attention_42": {
+        "exact": true,
+        "histories": 56536,
+        "ranking_depth": 10
+      },
+      "karrierewege/top_attention_43": {
+        "exact": true,
+        "histories": 56536,
+        "ranking_depth": 10
+      },
+      "fusion/depth50/top_PersonalRecency": {
+        "exact": true,
+        "histories": 28875,
+        "ranking_depth": 50
+      },
+      "fusion/depth50/top_BiLSTM_42": {
+        "exact": true,
+        "histories": 28875,
+        "ranking_depth": 50
+      },
+      "fusion/depth50/top_BiLSTM_43": {
+        "exact": true,
+        "histories": 28875,
+        "ranking_depth": 50
+      },
+      "decorte/depth50/top_PersonalRecency": {
+        "exact": true,
+        "histories": 227,
+        "ranking_depth": 50
+      },
+      "decorte/depth50/top_BiLSTM_42": {
+        "exact": true,
+        "histories": 227,
+        "ranking_depth": 50
+      },
+      "decorte/depth50/top_BiLSTM_43": {
+        "exact": true,
+        "histories": 227,
+        "ranking_depth": 50
+      }
+    }
+  },
+  "reports": {
+    "passed": true,
+    "absolute_tolerance": 1e-12,
+    "checks": {
+      "primary_NDCG_contrast": true,
+      "secondary_Recall_contrast": true,
+      "fusion": true,
+      "decorte": true,
+      "karrierewege_all_histories": true,
+      "karrierewege_unique_nonmatching_sequences": true,
+      "chronological": true,
+      "fusion_sensitivity": true,
+      "taxonomy_composition": true,
+      "attention_confirmation": true,
+      "attention_models_confirmation": true,
+      "attention_decorte": true,
+      "attention_models_decorte": true,
+      "attention_karrierewege_all_histories": true,
+      "attention_karrierewege_models_all_histories": true,
+      "attention_karrierewege_unique_nonmatching_sequences": true,
+      "attention_karrierewege_models_unique_nonmatching_sequences": true
+    }
+  },
+  "resource_use": {
+    "panel": {
+      "seconds": 1302.5160000000033,
+      "max_seconds": 1800.0,
+      "peak_cuda_bytes": 371634176,
+      "torch": "2.7.1+cu126",
+      "numpy": "2.2.6",
+      "device": "cuda"
+    },
+    "chronological": {
+      "seconds": 986.7189999999828,
+      "max_seconds": 1800.0,
+      "peak_cuda_bytes": 132610048,
+      "torch": "2.7.1+cu126",
+      "numpy": "2.2.6",
+      "device": "cuda"
+    }
+  },
+  "source_URL_checks": [
+    {
+      "name": "JobHop_v2_train.parquet",
+      "status": 200
+    },
+    {
+      "name": "JobHop_v2_test.parquet",
+      "status": 200
+    },
+    {
+      "name": "JobHop_v2_val.parquet",
+      "status": 200
+    },
+    {
+      "name": "decorte_train.csv",
+      "status": 200
+    },
+    {
+      "name": "decorte_test.csv",
+      "status": 200
+    },
+    {
+      "name": "karrierewege_test.zip",
+      "status": 200
+    },
+    {
+      "name": "taxonomy.zip",
+      "status": 200
+    },
+    {
+      "name": "encoder/config.json",
+      "status": 200
+    },
+    {
+      "name": "encoder/model.safetensors",
+      "status": 200
+    },
+    {
+      "name": "encoder/tokenizer.json",
+      "status": 200
+    }
+  ],
+  "unit_tests": 9,
+  "remaining_limits": [
+    "Source-data access conditions apply.",
+    "Pretrained encoder is not pretrained from scratch.",
+    "Bitwise portability across hardware/software is not established.",
+    "Some exploratory diagnostics and manuscript/figure-generation steps are not automated.",
+    "Study-code licence awaits author/institution confirmation."
+  ],
+  "end_to_end_reports": {
+    "passed": true,
+    "checks": {
+      "primary_NDCG_contrast": true,
+      "secondary_Recall_contrast": true,
+      "fusion": true,
+      "decorte": true,
+      "karrierewege": true,
+      "chronological": true
+    }
+  }
+}

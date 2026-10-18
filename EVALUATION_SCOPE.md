@@ -29,11 +29,17 @@ Seed-specific metrics are averaged within history. Bootstrap draws resample hist
 ## Validation
 
 ```sh
-python -m unittest discover -s tests -v
+python -m unittest discover -s tests -p test_evaluate_fusion.py -v
 ```
 
 Synthetic tests cover full targets, history-wide occupational grouping, paired contrasts, duplicate candidates, identifier misalignment and empty eligible subsets. They contain no source records. Local comparison additionally reproduced all seven published chronological point estimates on the 9,551-history confirmation sample and 9,671-history fusion sample, using all five saved seeds, to absolute tolerance 1e-12. `EVALUATION_VALIDATION.json` records that check; its private inputs are not distributed. No bootstrap equivalence or independent scientific replication is claimed by that receipt.
 
 ## Remaining limits
 
-Complete original/chronological training, historical catalogue reconstruction and unrestricted fitted-asset distribution remain outside this package. Third-party access conditions and a pending code-licence decision remain applicable. The public code and records improve auditability but do not constitute a fully reproducible raw-data-to-model pipeline.
+The saved-ranking evaluator itself does not train models. A separate workflow now
+provides source-data preparation, original and chronological predictor training,
+scoring, and the original analysis-specific uncertainty calculations; see TRAINING.md.
+In particular, report_chronological.py includes the joint seed/history bootstrap.
+The validation receipt above remains a record of the earlier point-estimate check,
+not a claim about that newer workflow. Raw data and fitted assets are not distributed;
+third-party access conditions and the pending study-code licence decision still apply.

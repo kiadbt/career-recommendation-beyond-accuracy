@@ -1,3 +1,9 @@
+LEGACY LOCAL-ASSET EVALUATION COMMANDS
+
+For source-data reconstruction, training, complete predictor scoring and statistical
+reports, use TRAINING.md. The commands below describe the earlier inference-only
+interface and its historical scope; they do not limit the new training workflow.
+
 REPRODUCING THE REPORTED EVALUATIONS
 
 A. Source access and fixed inputs

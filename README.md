@@ -25,7 +25,10 @@ The first command verifies package hashes and aggregate arithmetic and exports t
 | `extended_results/` | Cross-source diagnostics, composition and occupational-grouping sensitivity |
 | `chronological_results/` | Five-seed chronological results, selection records, protocol and verification receipts |
 | `supplementary_tables/` | Ten detailed tables from the condensed supplement, with a file index and interpretation notes |
-| `code/` | Portable preprocessing, recency scoring, self-attention inference and paired evaluation code |
+| `code/` | Source-data preparation, predictor training, scoring and statistical reports |
+| `TRAINING.md` | Commands to rebuild inputs, train all predictor architectures and rerun analyses |
+| `SOURCE_ASSETS.json` | Pinned source downloads and checksums |
+| `REBUILD_REFERENCE.json` | Array/tensor reference hashes and aggregate learning curves |
 | `protocols/` | Recorded analysis protocols |
 | `PROVENANCE.json` | Source URLs, revisions and required-asset hashes |
 | `REPRODUCING.txt` | Local input schemas, commands and tested scope |
@@ -35,7 +38,7 @@ The first command verifies package hashes and aggregate arithmetic and exports t
 
 ## Saved-ranking evaluation
 
-`code/evaluate_fusion.py` calculates complete-target NDCG, repeated/broader recall and seven paired contrasts from local saved rankings. See [EVALUATION_SCOPE.md](EVALUATION_SCOPE.md) for commands, validation and the distinction between history-only and joint seed/history uncertainty. Run the synthetic checks with `python -m unittest discover -s tests -v` after installing NumPy. No GPU is required.
+`code/evaluate_fusion.py` calculates complete-target NDCG, repeated/broader recall and seven paired contrasts from local saved rankings. See [EVALUATION_SCOPE.md](EVALUATION_SCOPE.md) for commands, validation and the distinction between history-only and joint seed/history uncertainty. Run the saved-ranking checks with `python -m unittest discover -s tests -p test_evaluate_fusion.py -v` after installing NumPy. No GPU is required.
 
 ## Data access and reproducibility limits
 
@@ -45,9 +48,24 @@ Obtain source data from the owners under their applicable conditions:
 - [Decorte anonymous working histories](https://huggingface.co/datasets/TechWolf/anonymous-working-histories)
 - [KARRIEREWEGE](https://huggingface.co/datasets/ElenaSenger/Karrierewege)
 
-This repository contains aggregate records and code, not raw career histories, personal identifiers, per-history predictions, catalogue text, embeddings or trained weights. Exact scoring requires separately available fitted assets identified in `PROVENANCE.json`. The portable inference command covers self-attention; it is not a complete training pipeline for every reported model. Chronological results are released as aggregates and protocol records, not a standalone chronological training implementation. End-to-end raw-data-to-model reproduction has not been verified in a clean environment.
+This repository contains research code and aggregate records, not raw career histories,
+personal identifiers, per-history predictions, catalogue text, embeddings or trained
+weights. The training workflow in [TRAINING.md](TRAINING.md) reconstructs catalogue
+features and person partitions from pinned source assets, trains MLP, BiLSTM and
+self-attention predictors, and produces rankings and statistical reports. No private
+identifier list or author-trained checkpoint is needed for that workflow. The MiniLM
+encoder remains a fixed pretrained input; it is not pretrained again.
 
-Preprocessing and analysis requirements are separate environment snapshots. Do not install both requirement files into one environment without reconciling their NumPy versions. Aggregate checks need neither file. Additional GPU training is unnecessary for those checks.
+The workflow covers the original panel, external scoring, five-seed chronological
+refitting and principal sensitivity analyses. It does not automatically rebuild every
+exploratory diagnostic or the manuscript's figures and layout. Source access conditions
+and numerical differences across software/hardware environments remain relevant.
+See [TRAINING_VALIDATION.json](TRAINING_VALIDATION.json) for the tested scope: nine input archives, eleven exact fitted-tensor matches, prediction replay and scientific-report comparisons.
+
+Use `requirements-training.txt` for the new training workflow, installing the matching
+PyTorch build separately. Older preprocessing/analysis requirement files describe
+earlier tool environments; do not combine all requirement files. Aggregate checks
+still need only the Python standard library and no GPU.
 
 Original and post hoc analyses are distinguished in the protocols. KARRIEREWEGE uses ordered singleton experiences; the other sources use quarter-level sets. Cross-source person independence is not verified. Historical validation receipts describe checks with private local assets; publication of a receipt does not distribute those assets or make the checks independently reproducible.
 
