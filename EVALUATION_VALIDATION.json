@@ -1,0 +1,12 @@
+{
+  "confirmation": {
+    "histories": 9551,
+    "seven_point_estimates_match": true,
+    "max_absolute_difference": 9.020562075079397e-17
+  },
+  "fusion": {
+    "histories": 9671,
+    "seven_point_estimates_match": true,
+    "max_absolute_difference": 2.42861286636753e-17
+  }
+}

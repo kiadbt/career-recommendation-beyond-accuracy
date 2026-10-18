@@ -33,6 +33,10 @@ The first command verifies package hashes and aggregate arithmetic and exports t
 
 `cohort_shift` and `Delta_cohort` in archived machine-readable records correspond to **change in model gap** in the manuscript. Existing field names are retained for compatibility. All supplementary table values preserve the displayed precision of the Word tables; JSON result files retain greater precision.
 
+## Saved-ranking evaluation
+
+`code/evaluate_fusion.py` calculates complete-target NDCG, repeated/broader recall and seven paired contrasts from local saved rankings. See [EVALUATION_SCOPE.md](EVALUATION_SCOPE.md) for commands, validation and the distinction between history-only and joint seed/history uncertainty. Run the synthetic checks with `python -m unittest discover -s tests -v` after installing NumPy. No GPU is required.
+
 ## Data access and reproducibility limits
 
 Obtain source data from the owners under their applicable conditions:
