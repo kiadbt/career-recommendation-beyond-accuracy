@@ -56,6 +56,7 @@
     "supplementary_tables/Supplementary_Table_S9.csv": "82260e514a0803d2b356ae7d95846131c9c17d350889560c622a76c4923e81f8",
     "supplementary_tables/Supplementary_tables_README.txt": "733f47ae26eeda1d1ebaa446b5ed572e79f17c21903f1420fd43f04f5874d2bd",
     "VALIDATION.json": "a68cc9077d939b98938eccb82d38da812a70d564ba8e37f44012c45298eb63ef",
-    "verify_release.py": "a773d37f53503e767a85656614c2f760391b64433a16d52cd8ae09226410694b"
+    "verify_release.py": "a773d37f53503e767a85656614c2f760391b64433a16d52cd8ae09226410694b",
+    ".gitattributes": "d60f352d0db1404c70afb4bb8b2ca3fd1c610572aa40720e8a0b7baa7885418c"
   }
 }
