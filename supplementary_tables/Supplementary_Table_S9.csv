@@ -1,0 +1,3 @@
+﻿Seed,Epochs run,Selected epoch,Best tuning NDCG
+42,22,17,0.2449
+43,18,13,0.2439

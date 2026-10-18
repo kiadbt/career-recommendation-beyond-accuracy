@@ -1,0 +1,63 @@
+{
+  "aggregate_source_hashes": {
+    "primary": {
+      "source_file": "COHORT_COMPARISON_CONFIRMATION_RESULTS_2026_10_08.json",
+      "source_sha256": "64f09d9d47a8d40ff771c11e29a00097f0fb51bfdf9749e53ecf887c96f5d108"
+    },
+    "fusion": {
+      "source_file": "FIXED_FUSION_VALIDATION_RESULTS_2026_10_08.json",
+      "source_sha256": "dcc94458b956fbc2848640c8222e9f16f058146798f7424959116724886b69c0"
+    },
+    "external": {
+      "source_file": "DECORTE_TRANSFER_RESULTS_2026_10_08.json",
+      "source_sha256": "862be48acd22df62661b6dcd2fc087d401498fe7c1df143675f9f219d5ae5d8b"
+    },
+    "groups": {
+      "source_file": "OCCUPATIONAL_GROUP_RESULTS_2026_10_08.json",
+      "source_sha256": "32e9456c621669bf349408db76d86766517487f5837ce1269503e4ccab2e340a"
+    },
+    "sensitivity": {
+      "source_file": "fusion_robustness/results.json",
+      "source_sha256": "281ffb4f55f18dda68da0926962d3d707591fa503dc428b911a01b6c4d170c7a"
+    },
+    "attention": {
+      "source_file": "attention_baseline/results.json",
+      "source_sha256": "e78170d1b2a89ae2f6cd370523630b584f2958a972351f68ffd7e97d4e4b7925"
+    },
+    "karrierewege": {
+      "source_file": "karrierewege_external/results.json",
+      "source_sha256": "9a90f8e3e091a386d870cf8d2c48ab2b8aa5500cae0d02bd7db66a9ea6fcdbed"
+    },
+    "attention_karrierewege": {
+      "source_file": "three_dataset_revision/results.json",
+      "source_sha256": "41658019a05466c0edfec35ea8c24001fd9030f7e1a1d9aba7522fb0ebec2f1c"
+    }
+  },
+  "datasets": {
+    "JobHop": {
+      "owner": "https://huggingface.co/datasets/aida-ugent/JobHop",
+      "revision": "766921f12b66eb886841393ab0400321e0373cb4"
+    },
+    "Decorte": {
+      "owner": "https://huggingface.co/datasets/TechWolf/anonymous-working-histories",
+      "revision": "300f78901132de9c388e8b4101d84d148f9ba65a"
+    },
+    "KARRIEREWEGE": {
+      "owner": "https://huggingface.co/datasets/ElenaSenger/Karrierewege",
+      "revision": "e69e98a0f00f75a7ea1a1fb09936ae46105f6c8d",
+      "test_archive_sha256": "bea35f3ff82435b8b6c21e1a66248a43128cd64a204ba872a23657b2c415dde9"
+    }
+  },
+  "catalogue": "Tabiya South Africa v1.0.0, ESCO 1.1.1-derived; 3007 occupations",
+  "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "embedding_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "training_environment": "PyTorch 2.7.1+cu126; NVIDIA RTX 2060",
+  "study_scope": "Cross-dataset career recommendation; not cross-domain evaluation",
+  "private_required_asset_hashes": {
+    "work\\step_replication\\cohort_comparison\\catalogue_texts.json": "2e65eea19cc400c88b76fd86fcd60aabe1b4a50322d1e815582f5a27ff57e78e",
+    "work\\step_replication\\cohort_comparison\\catalogue_embeddings.npz": "897b81cf772082d3a4d46cce4e8ecb6fc5587a149924021674f1c6305dd410cf",
+    "work\\step_replication\\cohort_comparison\\count_models.npz": "c0239c929f167e5cf90b320e93a98b608421c2cc3f131fce6e13e39000cdb10d",
+    "work\\attention_baseline\\seed_42_best.pt": "65ad86719f1feadc5baeac02fb0a73b28145905b59be633432d9368ef0766fe3",
+    "work\\attention_baseline\\seed_43_best.pt": "5b99c963d454fb656cc3e07e74df98162ea77a93b1499d59d3c1de3e4bd37a9a"
+  }
+}

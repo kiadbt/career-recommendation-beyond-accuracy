@@ -1,0 +1,8 @@
+Exploratory strengthening analyses, specified before computing these results.
+Use unchanged stored rankings and full targets. No tuning, model selection or training.
+Sources: held-out JobHop fusion sample, Decorte, KARRIEREWEGE full and unique nonmatching sample.
+Taxonomy sensitivity: all ISCO prefix depths 1, 2, 3 and 4, verified against the source hierarchy. Recover broader targets absent from the entire recorded history at each depth. Compare seed-averaged fusion recall with seed-averaged BiLSTM recall. Paired-history bootstrap, 5,000 draws, simultaneous intervals across the four depths separately for each sample. Intervals condition on fitted models and do not adjust for the wider adaptive research history. No level selected after inspecting results.
+Descriptive diagnostics: history length; target size; repeated-target fraction; repeat-only, mixed, unseen-only cohorts; component top-ten intersection; fusion NDCG changes against each component. Report fixed cohort/length/target-size/agreement strata; do not imply causation from cross-source differences. Exact cohort decomposition and common pooled composition standardisation across the three full samples; unique-sequence analysis is a sensitivity sample, not an additional independent dataset.
+Report existing two seeds separately. Additional seed training is deferred until the chronological-data feasibility audit establishes whether a new training design is justified.
+Date feasibility: inspect dates and existing fitted-person partitions locally. Distinguish genuinely chronological refitting from stratifying existing test predictions by date. No temporal-generalisation claim from the latter.
+Keep all person-level records local. Publishable outputs contain aggregates only.

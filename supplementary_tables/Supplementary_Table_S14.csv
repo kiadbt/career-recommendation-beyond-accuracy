@@ -1,0 +1,11 @@
+﻿Sample,Evaluation group,N,vs recency,vs BiLSTM
+JobHop,repeat only,"6,851",-0.0347,+0.1460
+JobHop,mixed,714,+0.0063,+0.0727
+JobHop,unseen only,"21,310",+0.0362,-0.0244
+Decorte,repeat only,67,-0.0699,+0.2468
+Decorte,mixed,1,-0.2664,+0.0842
+Decorte,unseen only,159,+0.0915,-0.0483
+KW full,repeat only,"18,157",-0.2071,+0.3066
+KW full,unseen only,"38,379",+0.0115,-0.0088
+KW unique,repeat only,"15,963",-0.2016,+0.3083
+KW unique,unseen only,"27,700",+0.0100,-0.0086

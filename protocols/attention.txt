@@ -1,0 +1,32 @@
+Additional self-attention baseline — 14 October 2026
+
+Post hoc extension after prior test findings; not an untouched confirmatory test.
+Implement a quarter-set self-attention baseline, not a claimed reproduction of
+SASRec. Same frozen 384-dimensional occupation embeddings, historical quarter
+sets, 3007 candidates, 30000 fitting resumes, 116387 fitting prefixes and 3000
+tuning resumes as existing models. No new features or labels.
+
+One causal Transformer encoder block, projected width 64, two attention heads,
+feed-forward width 256, learned positions up to 256 quarters, dropout 0.1,
+pre-layer normalisation and final layer normalisation. The last valid quarter
+state feeds a linear 3007-class head. Unused padded positions are masked.
+AdamW lr 0.001, weight decay 0.01; batch 128, gradient clipping 1; existing
+resume-balanced multi-target loss; float32; seeds 42 and 43.
+
+Checkpoint selection only on full-target tuning NDCG@10. Minimum 10, maximum
+45 epochs per seed; stop after five consecutive nonimproving tuning epochs.
+At the cap, require best-score improvement over the preceding five epochs
+below 0.002, otherwise report under-convergence and do not claim adequacy.
+No hyperparameter sweep or test-driven retraining. Single fixed architecture.
+Benchmark fitting data before admitting the two fits. GPU wall-time cap 900s,
+4.5-GiB allocation ceiling, local RTX 2060; preserve resumable states.
+
+After both fits meet stopping criteria, freeze checkpoint hashes and evaluate
+on original JobHop test and Decorte external test, with unchanged weights.
+Do not replace the originally selected BiLSTM or its confirmatory comparisons.
+Report NDCG@10 and Recall@10 overall and full-target NDCG among unseen-positive
+resumes. Three contrasts versus the saved recency baseline: overall gap,
+unseen-positive gap, and their difference. 5000 paired-resume bootstrap draws,
+seed 20261015, max-absolute centred radius across these three per dataset.
+Also report the paired overall NDCG difference versus the existing BiLSTM
+descriptively. No new fusion selection for this model.

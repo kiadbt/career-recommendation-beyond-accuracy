@@ -1,0 +1,16 @@
+{
+  "preprocessing": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "pyarrow": "25.0.1"
+  },
+  "metrics_and_inference": {
+    "python": "3.12.14",
+    "numpy": "2.2.6",
+    "torch": "2.7.1+cu126",
+    "hardware": "NVIDIA GeForce RTX 2060",
+    "numerical_threads": 2
+  },
+  "note": "Two existing local runtimes were used. No claim of a clean-environment full training reproduction."
+}

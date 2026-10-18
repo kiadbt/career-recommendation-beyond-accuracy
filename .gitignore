@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.npz
+*.npy
+*.parquet
+*.pt
+*.pth
+raw_data/
+private/
+generated_tables/
+EXPORT_VERIFICATION.json
+RELEASE_VERIFICATION.json

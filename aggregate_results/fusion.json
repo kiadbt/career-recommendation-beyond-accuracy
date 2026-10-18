@@ -1,0 +1,73 @@
+{
+  "resumes": 28875,
+  "repeat_support": 7565,
+  "new_group_support": 15668,
+  "contrasts": {
+    "NDCG_vs_recency": {
+      "estimate": 0.018659659229849704,
+      "simultaneous_95_interval": [
+        0.015571611384119683,
+        0.021747707075579725
+      ]
+    },
+    "NDCG_vs_BiLSTM": {
+      "estimate": 0.01844488043129495,
+      "simultaneous_95_interval": [
+        0.01535683258556493,
+        0.021532928277024972
+      ]
+    },
+    "repeat_Recall_vs_recency": {
+      "estimate": -0.01013439083498568,
+      "simultaneous_95_interval": [
+        -0.013222438680715702,
+        -0.007046342989255658
+      ]
+    },
+    "new_group_Recall_vs_BiLSTM": {
+      "estimate": -0.015591758148242702,
+      "simultaneous_95_interval": [
+        -0.018679805993972724,
+        -0.01250371030251268
+      ]
+    }
+  },
+  "models": [
+    {
+      "model": "PersonalRecency",
+      "NDCG": 0.24028103198420403,
+      "repeat_Recall": 0.9994712491738268,
+      "new_group_Recall": 0.131272870394009,
+      "cohort_NDCG": {
+        "mixed": 0.49937113852800746,
+        "repeat_only": 0.8031392767195854,
+        "unseen_only": 0.05064554766912312
+      },
+      "full_Recall": 0.34773762110904965
+    },
+    {
+      "model": "BiLSTM",
+      "NDCG": 0.24049581078275878,
+      "repeat_Recall": 0.7912756113681427,
+      "new_group_Recall": 0.17401072249170282,
+      "cohort_NDCG": {
+        "mixed": 0.43295714793251483,
+        "repeat_only": 0.6224535112116049,
+        "unseen_only": 0.11125087411626648
+      },
+      "full_Recall": 0.366733436404865
+    },
+    {
+      "model": "Fusion",
+      "NDCG": 0.2589406912140537,
+      "repeat_Recall": 0.9893368583388411,
+      "new_group_Recall": 0.15841896434346014,
+      "cohort_NDCG": {
+        "mixed": 0.5056479233144116,
+        "repeat_only": 0.7684772821908464,
+        "unseen_only": 0.08686259883950363
+      },
+      "full_Recall": 0.39276714079571223
+    }
+  ]
+}

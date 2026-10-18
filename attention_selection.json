@@ -1,0 +1,9 @@
+{
+  "checkpoint_hashes": {
+    "42": "65ad86719f1feadc5baeac02fb0a73b28145905b59be633432d9368ef0766fe3",
+    "43": "5b99c963d454fb656cc3e07e74df98162ea77a93b1499d59d3c1de3e4bd37a9a"
+  },
+  "parameters": 286591,
+  "post_hoc_extension": true,
+  "tuning_only_checkpoint_selection": true
+}

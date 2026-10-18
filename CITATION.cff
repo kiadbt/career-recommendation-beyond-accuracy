@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this repository when using its code or aggregate records."
+type: software
+title: "Career Recommendation Beyond Overall Accuracy: Model Comparisons and Broader Occupational Retrieval"
+version: 1.0.0
+date-released: 2026-10-18
+url: "https://github.com/kiadbt/career-recommendation-beyond-accuracy"
+authors:
+  - family-names: Yarima
+    given-names: Kamaluddeen Ibrahim
+  - family-names: Imam
+    given-names: Abdullahi Abubakar
+  - family-names: Apong
+    given-names: Rosyzie Anna
+  - family-names: Ilyasu
+    given-names: Nazir Muhammad
+  - family-names: Ali
+    given-names: Usman

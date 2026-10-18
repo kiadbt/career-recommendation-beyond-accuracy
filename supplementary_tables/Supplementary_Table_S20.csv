@@ -1,0 +1,9 @@
+﻿Sample,Seed,vs recency,vs BiLSTM
+JobHop,42,+0.0191,+0.0182
+JobHop,43,+0.0182,+0.0186
+Decorte,42,+0.0426,+0.0410
+Decorte,43,+0.0420,+0.0377
+KW full,42,-0.0556,+0.0908
+KW full,43,-0.0618,+0.0941
+KW unique,42,-0.0642,+0.1056
+KW unique,43,-0.0706,+0.1089

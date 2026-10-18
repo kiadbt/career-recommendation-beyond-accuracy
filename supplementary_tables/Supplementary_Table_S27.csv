@@ -1,0 +1,8 @@
+﻿Contrast,42,43,44,45,46
+"Neural − recency, all NDCG",+0.0025,+0.0026,+0.0025,+0.0014,+0.0035
+"Neural − recency, unseen-positive NDCG",+0.0480,+0.0500,+0.0499,+0.0501,+0.0507
+Change in model gap,+0.0456,+0.0474,+0.0474,+0.0487,+0.0472
+"Fusion − recency, NDCG",+0.0213,+0.0198,+0.0210,+0.0208,+0.0210
+"Fusion − neural, NDCG",+0.0188,+0.0173,+0.0185,+0.0194,+0.0175
+"Fusion − recency, repeated recall",−0.0108,−0.0127,−0.0110,−0.0093,−0.0116
+"Fusion − neural, broader recall",−0.0039,−0.0068,−0.0046,−0.0088,−0.0067

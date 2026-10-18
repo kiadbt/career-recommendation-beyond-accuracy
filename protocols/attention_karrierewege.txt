@@ -1,0 +1,26 @@
+Frozen self-attention external extension, 15 October 2026
+
+This is a post hoc architectural sensitivity analysis, specified after the
+BiLSTM/recency/fusion KARRIEREWEGE results were inspected. It is not a fresh
+confirmatory dataset or an independent preregistration.
+
+Use the existing QuarterSelfAttention checkpoints (seeds 42 and 43), unchanged,
+on the exact 56,536 KARRIEREWEGE queries already constructed. No optimisation,
+hyperparameter search, checkpoint reselection, or attention-based fusion.
+Retain the fixed complete 3,007-occupation catalogue and stable tie breaking.
+Report NDCG@10 for all histories and unseen-positive histories, and Recall@10.
+Average the two seed metrics within each history before population aggregation.
+Contrast attention minus personal recency overall, within unseen-positive
+histories, and the difference between those gaps (cohort shift).
+Repeat on the previously fixed 43,663 unique nonmatching sequences.
+For each population, use 5,000 paired-history bootstrap draws, seed 20261018
+for all histories and 20261019 for the sensitivity. A common 95th percentile
+of maximum absolute centered deviations gives simultaneous intervals across
+the three contrasts within that population. These are not joint intervals
+across architectures, datasets, or populations. Report seed means descriptively.
+
+Hash protocol, scripts, queries and checkpoints before prediction. GPU cap
+180 seconds, allocation cap 4.5 GiB, batch 128, two CPU threads. Fail closed
+without restarting if the budget is exceeded. Verify scalar metrics for every
+history, and padding and batch-size invariance on a fixed sample. Preserve
+unfavourable or inconclusive outcomes. No GPU training or new data downloads.

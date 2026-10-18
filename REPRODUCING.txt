@@ -1,0 +1,74 @@
+REPRODUCING THE REPORTED EVALUATIONS
+
+A. Source access and fixed inputs
+Use the owner URLs and exact revisions in PROVENANCE.json. JobHop files:
+JobHop_v2_train.parquet, JobHop_v2_test.parquet, JobHop_v2_val.parquet.
+Decorte: train.csv and test.csv. KARRIEREWEGE: karierrewege_test.zip
+(the upstream filename contains that spelling). Verify the recorded archive
+hash before decoding it. No raw data are downloaded by these tools.
+
+Obtain/build the catalogue in the recorded order: 3,007 rows, with code, uri,
+and history text fields; history text starts with "role: " and separates the
+description with " \n description:". Embeddings NPZ has float32 history
+of shape (3007,384), generated from the pinned encoder and recorded templates.
+Exact hashes are in PROVENANCE.json. ESCO version differences must not be
+silently resolved with a different mapping. The supplementary methods describe
+tokenisation and pooling. Encoder weights and catalogue assets are not included.
+
+B. Preprocessing commands (replace paths with your own local files)
+python code/prepare_quarters.py --dataset jobhop --source JobHop_v2_test.parquet --catalogue catalogue_texts.json --embeddings catalogue_embeddings.npz --out jobhop_queries.npz
+python code/prepare_quarters.py --dataset decorte --source decorte_test.csv --catalogue catalogue_texts.json --embeddings catalogue_embeddings.npz --out decorte_queries.npz
+python code/prepare_karrierewege.py --archive karierrewege_test.zip --catalogue catalogue_texts.json --embeddings catalogue_embeddings.npz --jobhop-fitting-queries quarter_queries.npz --decorte-queries decorte_queries.npz --output-dir karrierewege_local
+
+Quarter constructor: parse Q1–Q4 and year; start-date precedence with valid
+end-date fallback; exclude the complete history for an unresolved date; remove
+literal unknown occupation rows; group distinct codes by quarter; retain at
+least two quarters; target the final quarter. Decorte month/year dates are
+converted to quarters and its ESCO URIs mapped exactly. Prediction inputs never
+include target dates. KARRIEREWEGE: unique exact normalised English label match;
+exclude any history with an unmapped/ambiguous label; consecutive unique order
+starting at zero; retain repeats; last experience is the singleton target.
+
+KARRIEREWEGE sensitivity additionally needs the ORIGINAL fitting-query cache
+with a fit index array, not all source training histories. It keeps one complete
+sequence per signature and removes exact matches to final fitting queries and
+Decorte test queries. Do not substitute all source training records.
+
+C. Query and prediction schemas
+Query NPZ: pid[N], history_blocks[N,L], length[N], target_block[N],
+bank_members[B,M] (padding -1), bank_size[B], bank_history_embeddings[B,384].
+Block indices reference the bank; members reference the ordered catalogue.
+KARRIEREWEGE also has sensitivity_indices. The fitting cache includes fit indices.
+Prediction NPZ: pid[N], top_attention_42[N,10], top_attention_43[N,10].
+Recency NPZ: pid[N], top_PersonalRecency[N,10]. All IDs and row order must agree.
+NDCG uses all target occupations, ideal discount for min(10,target count),
+and the complete fixed catalogue. Seed metrics are averaged per history,
+not logits. Unseen-positive means at least one target absent from all history.
+
+D. Frozen scoring (no training)
+python code/predict_recency.py --queries jobhop_queries.npz --counts count_models.npz --out recency_predictions.npz
+python code/infer_attention.py --queries jobhop_queries.npz --checkpoint-42 seed_42_best.pt --checkpoint-43 seed_43_best.pt --selection attention_selection.json --device cuda --seconds 180 --out attention_predictions.npz
+The count cache contains fitting-only popularity and transition arrays.
+The selection manifest verifies checkpoint hashes. CPU inference is the default;
+CUDA must be requested. GPU allocation is capped at 4.5 GiB and each batch checks
+the wall-time cap. Do not overwrite saved predictions or select new checkpoints
+on evaluation results. Original BiLSTM/fusion results remain in aggregates;
+this portable inference entry point covers the self-attention extension only.
+
+E. Paired metrics and simultaneous intervals
+python code/cohort_metrics.py --queries jobhop_queries.npz --predictions attention_predictions.npz --recency-predictions recency_predictions.npz --draws 5000 --seed 20261015 --out attention_results.json
+Use seed 20261015 for JobHop and Decorte; 20261018 for KARRIEREWEGE full sample;
+20261019 plus --unique-nonmatching for its sensitivity. A common 95th percentile
+of maximum absolute centred bootstrap errors covers the three contrasts within
+that population. It is not a joint interval across models or datasets. Small
+floating-point differences between BLAS builds are possible.
+
+F. Environment and validation
+Python 3.12, PyTorch 2.7.1+cu126, NVIDIA RTX 2060, two CPU numerical threads.
+See ENVIRONMENT.json for exact versions observed in validation; the two requirements files distinguish preprocessing from inference/metrics. GPU training is not part of these commands.
+VALIDATION.json records actual tests, including raw-source reconstruction,
+saved-ranking agreement, and aggregate/bootstrap replay. Tests use private local
+assets; their inclusion in a verification receipt does not redistribute them.
+The original study's full training workflow is described in the supplement;
+its training budget, selection history and external/local asset dependencies
+are not replaced by these inference scripts. A new training run may differ.

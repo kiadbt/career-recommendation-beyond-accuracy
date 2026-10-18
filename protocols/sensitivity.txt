@@ -1,0 +1,33 @@
+Post hoc fusion sensitivity analysis — 14 October 2026
+
+This analysis is specified after the primary study results have been inspected.
+It is exploratory robustness evidence, not a new confirmatory experiment.
+Reuse the frozen BiLSTM seeds 42/43, PersonalRecency parameters, catalogue,
+JobHop reserved validation sample and Decorte external test. No model fitting,
+hyperparameter selection, sample exclusion, or replacement of the primary rule.
+
+Compute component top-50 rankings once. Require their first ten entries to
+reproduce every saved component prediction exactly before analysis continues.
+For each output k in {5,10,20}, input depth L in {10,20,50} with L >= k,
+and neural weight w in {0.25,0.50,0.75}, compute truncated reciprocal rank
+fusion (rank constant 60), using weights (1-w,w), ties by catalogue index.
+This yields 24 configurations. Endpoints are the separately reported component
+rankings. Report all configurations, not a test-selected preferred setting.
+
+Per resume, calculate full-target NDCG@k, full-target Recall@k, repeated-target
+Recall@k and broader-target Recall@k using the original full-history group
+definition and positive-subset denominators. Average seed-specific metrics
+within resume. Compare fusion NDCG to each component, repeated recall to
+recency, and broader recall to BiLSTM at the same k. Reproduce the original
+k=10,L=10,w=0.50 point estimates to numerical precision.
+
+Use 5,000 paired-resume bootstrap draws, seed 20261014, separately per dataset.
+Within each dataset a common max-absolute-centred-deviation radius covers all
+96 contrasts (24 configurations x 4). Conditional on the two fixed fitted
+seeds; it does not adjust for earlier adaptive research decisions.
+The original +0.005 NDCG and -0.01 recall margins may be shown as descriptive
+reference thresholds; their extension to other k is post hoc.
+
+Resource plan: inference only on existing local GPU, 300-second cap and
+4.5-GiB per-process allocation ceiling; no downloads/cloud compute. CPU
+analysis uses two numerical-library threads. Save provenance and timing.

@@ -1,0 +1,600 @@
+{
+  "exploratory": true,
+  "bootstrap_draws": 5000,
+  "interval_family": "four taxonomy depths per sample",
+  "catalogue_verified": 3007,
+  "results": {
+    "JobHop": {
+      "n": 28875,
+      "mean_history_blocks": 3.8820779220779222,
+      "median_history_blocks": 3.0,
+      "mean_target_size": 1.0845714285714285,
+      "multi_target_percent": 7.2173160173160165,
+      "mean_repeated_target_fraction": 0.24908884766027622,
+      "mean_top10_intersection": 4.248502164502164,
+      "cohort_counts": [
+        6851,
+        714,
+        21310
+      ],
+      "fusion_minus_recency": 0.018659659229849704,
+      "fusion_minus_neural": 0.01844488043129495,
+      "taxonomy": [
+        {
+          "depth": 1,
+          "eligible": 10717,
+          "recency": 0.13512798979814003,
+          "neural": 0.16532145189885228,
+          "fusion": 0.15566001057509873,
+          "difference": -0.00966144132375354,
+          "simultaneous_95_interval": [
+            -0.013500536969637801,
+            -0.005822345677869278
+          ]
+        },
+        {
+          "depth": 2,
+          "eligible": 15668,
+          "recency": 0.13127287039400898,
+          "neural": 0.17401072249170282,
+          "fusion": 0.1584189643434601,
+          "difference": -0.015591758148242704,
+          "simultaneous_95_interval": [
+            -0.019430853794126964,
+            -0.011752662502358442
+          ]
+        },
+        {
+          "depth": 3,
+          "eligible": 18162,
+          "recency": 0.13379491979591088,
+          "neural": 0.19153570248713955,
+          "fusion": 0.1698945600704768,
+          "difference": -0.021641142416662734,
+          "simultaneous_95_interval": [
+            -0.025480238062546994,
+            -0.017802046770778474
+          ]
+        },
+        {
+          "depth": 4,
+          "eligible": 19531,
+          "recency": 0.1286732203505538,
+          "neural": 0.20020419308986204,
+          "fusion": 0.17444361954499688,
+          "difference": -0.025760573544865183,
+          "simultaneous_95_interval": [
+            -0.029599669190749443,
+            -0.021921477898980923
+          ]
+        }
+      ],
+      "strata": [
+        {
+          "variable": "cohort",
+          "stratum": "repeat_only",
+          "n": 6851,
+          "fusion_minus_recency": -0.03466199452873903,
+          "fusion_minus_neural": 0.14602377097924155
+        },
+        {
+          "variable": "cohort",
+          "stratum": "mixed",
+          "n": 714,
+          "fusion_minus_recency": 0.006276784786404151,
+          "fusion_minus_neural": 0.0726907753818968
+        },
+        {
+          "variable": "cohort",
+          "stratum": "unseen_only",
+          "n": 21310,
+          "fusion_minus_recency": 0.036217051170380515,
+          "fusion_minus_neural": -0.02438827527676285
+        },
+        {
+          "variable": "history_blocks",
+          "stratum": "1",
+          "n": 4241,
+          "fusion_minus_recency": 0.006286684431883462,
+          "fusion_minus_neural": 0.006933753956802248
+        },
+        {
+          "variable": "history_blocks",
+          "stratum": "2-4",
+          "n": 14982,
+          "fusion_minus_recency": 0.021977052558196916,
+          "fusion_minus_neural": 0.014854964812981781
+        },
+        {
+          "variable": "history_blocks",
+          "stratum": "5+",
+          "n": 9652,
+          "fusion_minus_recency": 0.01894691568166041,
+          "fusion_minus_neural": 0.029075092115079814
+        },
+        {
+          "variable": "target_size",
+          "stratum": "single",
+          "n": 26791,
+          "fusion_minus_recency": 0.018474836253976796,
+          "fusion_minus_neural": 0.018379848183999976
+        },
+        {
+          "variable": "target_size",
+          "stratum": "multiple",
+          "n": 2084,
+          "fusion_minus_recency": 0.02103566323494138,
+          "fusion_minus_neural": 0.01928090679275356
+        },
+        {
+          "variable": "agreement",
+          "stratum": "below_5",
+          "n": 17556,
+          "fusion_minus_recency": 0.024224543721970283,
+          "fusion_minus_neural": 0.02459668970219777
+        },
+        {
+          "variable": "agreement",
+          "stratum": "at_least_5",
+          "n": 11319,
+          "fusion_minus_recency": 0.01002840981349942,
+          "fusion_minus_neural": 0.008903298704996706
+        }
+      ],
+      "seed_contrasts": [
+        {
+          "seed": 42,
+          "fusion_minus_recency": 0.019133034762250575,
+          "fusion_minus_neural": 0.018247972907283472
+        },
+        {
+          "seed": 43,
+          "fusion_minus_recency": 0.01818628369744884,
+          "fusion_minus_neural": 0.018641787955306435
+        }
+      ],
+      "pooled_binary_cohort_weights": [
+        0.29280226067867066,
+        0.7071977393213293
+      ],
+      "standardised_fusion_minus_recency": 0.014777072749191468,
+      "standardised_fusion_minus_neural": 0.027734466195109497
+    },
+    "Decorte": {
+      "n": 227,
+      "mean_history_blocks": 3.449339207048458,
+      "median_history_blocks": 3.0,
+      "mean_target_size": 1.0440528634361232,
+      "multi_target_percent": 4.405286343612335,
+      "mean_repeated_target_fraction": 0.2973568281938326,
+      "mean_top10_intersection": 2.6916299559471364,
+      "cohort_counts": [
+        67,
+        1,
+        159
+      ],
+      "fusion_minus_recency": 0.04232239517308405,
+      "fusion_minus_neural": 0.03936345714653408,
+      "taxonomy": [
+        {
+          "depth": 1,
+          "eligible": 68,
+          "recency": 0.04411764705882353,
+          "neural": 0.25,
+          "fusion": 0.19117647058823528,
+          "difference": -0.058823529411764705,
+          "simultaneous_95_interval": [
+            -0.11038961038961038,
+            -0.007257448433919025
+          ]
+        },
+        {
+          "depth": 2,
+          "eligible": 107,
+          "recency": 0.04672897196261682,
+          "neural": 0.2383177570093458,
+          "fusion": 0.19158878504672897,
+          "difference": -0.04672897196261682,
+          "simultaneous_95_interval": [
+            -0.09829505294046251,
+            0.004837109015228859
+          ]
+        },
+        {
+          "depth": 3,
+          "eligible": 125,
+          "recency": 0.064,
+          "neural": 0.26,
+          "fusion": 0.212,
+          "difference": -0.048,
+          "simultaneous_95_interval": [
+            -0.09956608097784568,
+            0.0035660809778456787
+          ]
+        },
+        {
+          "depth": 4,
+          "eligible": 136,
+          "recency": 0.058823529411764705,
+          "neural": 0.2647058823529412,
+          "fusion": 0.21691176470588236,
+          "difference": -0.04779411764705882,
+          "simultaneous_95_interval": [
+            -0.0993601986249045,
+            0.0037719633307868594
+          ]
+        }
+      ],
+      "strata": [
+        {
+          "variable": "cohort",
+          "stratum": "repeat_only",
+          "n": 67,
+          "fusion_minus_recency": -0.06989286215527725,
+          "fusion_minus_neural": 0.24682345954295046
+        },
+        {
+          "variable": "cohort",
+          "stratum": "mixed",
+          "n": 1,
+          "fusion_minus_recency": -0.26643399095682296,
+          "fusion_minus_neural": 0.08422268520818871
+        },
+        {
+          "variable": "cohort",
+          "stratum": "unseen_only",
+          "n": 159,
+          "fusion_minus_recency": 0.09154993370849358,
+          "fusion_minus_neural": -0.048338928945425366
+        },
+        {
+          "variable": "history_blocks",
+          "stratum": "1",
+          "n": 14,
+          "fusion_minus_recency": -0.006272994386116845,
+          "fusion_minus_neural": -0.011841236770843663
+        },
+        {
+          "variable": "history_blocks",
+          "stratum": "2-4",
+          "n": 161,
+          "fusion_minus_recency": 0.052696569015798285,
+          "fusion_minus_neural": 0.023499567788803327
+        },
+        {
+          "variable": "history_blocks",
+          "stratum": "5+",
+          "n": 52,
+          "fusion_minus_recency": 0.02328573104138831,
+          "fusion_minus_neural": 0.10226637832803293
+        },
+        {
+          "variable": "target_size",
+          "stratum": "single",
+          "n": 217,
+          "fusion_minus_recency": 0.04422887391879443,
+          "fusion_minus_neural": 0.03798180661419146
+        },
+        {
+          "variable": "target_size",
+          "stratum": "multiple",
+          "n": 10,
+          "fusion_minus_recency": 0.0009518063911688856,
+          "fusion_minus_neural": 0.06934527369836886
+        },
+        {
+          "variable": "agreement",
+          "stratum": "below_5",
+          "n": 202,
+          "fusion_minus_recency": 0.04616578001404361,
+          "fusion_minus_neural": 0.040664376785218295
+        },
+        {
+          "variable": "agreement",
+          "stratum": "at_least_5",
+          "n": 25,
+          "fusion_minus_recency": 0.01126784565813084,
+          "fusion_minus_neural": 0.028852026465965602
+        }
+      ],
+      "seed_contrasts": [
+        {
+          "seed": 42,
+          "fusion_minus_recency": 0.04261476263522884,
+          "fusion_minus_neural": 0.041026761190303504
+        },
+        {
+          "seed": 43,
+          "fusion_minus_recency": 0.04203002771093926,
+          "fusion_minus_neural": 0.037700153102764665
+        }
+      ],
+      "pooled_binary_cohort_weights": [
+        0.29280226067867066,
+        0.7071977393213293
+      ],
+      "standardised_fusion_minus_recency": 0.04269683422031703,
+      "standardised_fusion_minus_neural": 0.038671206132850994
+    },
+    "KARRIEREWEGE": {
+      "n": 56536,
+      "mean_history_blocks": 3.35074996462431,
+      "median_history_blocks": 2.0,
+      "mean_target_size": 1.0,
+      "multi_target_percent": 0.0,
+      "mean_repeated_target_fraction": 0.32115820008490165,
+      "mean_top10_intersection": 4.178921395217206,
+      "cohort_counts": [
+        18157,
+        0,
+        38379
+      ],
+      "fusion_minus_recency": -0.058700064265639326,
+      "fusion_minus_neural": 0.0924708358402808,
+      "taxonomy": [
+        {
+          "depth": 1,
+          "eligible": 22453,
+          "recency": 0.07571371308956487,
+          "neural": 0.08172627265844208,
+          "fusion": 0.08934218144568655,
+          "difference": 0.007615908787244466,
+          "simultaneous_95_interval": [
+            0.005389992334291174,
+            0.009841825240197758
+          ]
+        },
+        {
+          "depth": 2,
+          "eligible": 31376,
+          "recency": 0.07620474247832738,
+          "neural": 0.08058707292197859,
+          "fusion": 0.08414074451810301,
+          "difference": 0.0035536715961244263,
+          "simultaneous_95_interval": [
+            0.0013277551431711341,
+            0.005779588049077718
+          ]
+        },
+        {
+          "depth": 3,
+          "eligible": 35020,
+          "recency": 0.07972587093089663,
+          "neural": 0.08883495145631068,
+          "fusion": 0.08866362078812107,
+          "difference": -0.00017133066818960594,
+          "simultaneous_95_interval": [
+            -0.002397247121142898,
+            0.002054585784763686
+          ]
+        },
+        {
+          "depth": 4,
+          "eligible": 37055,
+          "recency": 0.07958440156524085,
+          "neural": 0.09794899473755228,
+          "fusion": 0.09530427742544866,
+          "difference": -0.00264471731210363,
+          "simultaneous_95_interval": [
+            -0.0048706337650569215,
+            -0.00041880085915033767
+          ]
+        }
+      ],
+      "strata": [
+        {
+          "variable": "cohort",
+          "stratum": "repeat_only",
+          "n": 18157,
+          "fusion_minus_recency": -0.20709281301063986,
+          "fusion_minus_neural": 0.3066295724978921
+        },
+        {
+          "variable": "cohort",
+          "stratum": "unseen_only",
+          "n": 38379,
+          "fusion_minus_recency": 0.011504139568826776,
+          "fusion_minus_neural": -0.00884707711972984
+        },
+        {
+          "variable": "history_blocks",
+          "stratum": "1",
+          "n": 16309,
+          "fusion_minus_recency": 0.013042555635021935,
+          "fusion_minus_neural": -0.007604213186768406
+        },
+        {
+          "variable": "history_blocks",
+          "stratum": "2-4",
+          "n": 27159,
+          "fusion_minus_recency": -0.07975526003870681,
+          "fusion_minus_neural": 0.11476861115569398
+        },
+        {
+          "variable": "history_blocks",
+          "stratum": "5+",
+          "n": 13068,
+          "fusion_minus_recency": -0.10447694871307926,
+          "fusion_minus_neural": 0.17102445497028065
+        },
+        {
+          "variable": "target_size",
+          "stratum": "single",
+          "n": 56536,
+          "fusion_minus_recency": -0.058700064265639326,
+          "fusion_minus_neural": 0.0924708358402808
+        },
+        {
+          "variable": "agreement",
+          "stratum": "below_5",
+          "n": 33919,
+          "fusion_minus_recency": -0.07206244437676965,
+          "fusion_minus_neural": 0.11701565034884195
+        },
+        {
+          "variable": "agreement",
+          "stratum": "at_least_5",
+          "n": 22617,
+          "fusion_minus_recency": -0.03866033437266373,
+          "fusion_minus_neural": 0.05566066812060595
+        }
+      ],
+      "seed_contrasts": [
+        {
+          "seed": 42,
+          "fusion_minus_recency": -0.05564158296114863,
+          "fusion_minus_neural": 0.09082263801779156
+        },
+        {
+          "seed": 43,
+          "fusion_minus_recency": -0.061758545570130045,
+          "fusion_minus_neural": 0.09411903366277005
+        }
+      ],
+      "pooled_binary_cohort_weights": [
+        0.29280226067867066,
+        0.7071977393213293
+      ],
+      "standardised_fusion_minus_recency": -0.052501542323909224,
+      "standardised_fusion_minus_neural": 0.08352519907964275
+    },
+    "KARRIEREWEGE unique": {
+      "n": 43663,
+      "mean_history_blocks": 3.8917390009848156,
+      "median_history_blocks": 3.0,
+      "mean_target_size": 1.0,
+      "multi_target_percent": 0.0,
+      "mean_repeated_target_fraction": 0.36559558436204564,
+      "mean_top10_intersection": 3.8384100955042024,
+      "cohort_counts": [
+        15963,
+        0,
+        27700
+      ],
+      "fusion_minus_recency": -0.06738734273805302,
+      "fusion_minus_neural": 0.10728795415422561,
+      "taxonomy": [
+        {
+          "depth": 1,
+          "eligible": 16257,
+          "recency": 0.060220212831395704,
+          "neural": 0.06237313157409116,
+          "fusion": 0.06606384941871193,
+          "difference": 0.0036907178446207787,
+          "simultaneous_95_interval": [
+            0.0012122677346264469,
+            0.006169167954615111
+          ]
+        },
+        {
+          "depth": 2,
+          "eligible": 22403,
+          "recency": 0.0640092844708298,
+          "neural": 0.06704459224211043,
+          "fusion": 0.06657590501272151,
+          "difference": -0.00046868722938892113,
+          "simultaneous_95_interval": [
+            -0.002947137339383253,
+            0.0020097628806054106
+          ]
+        },
+        {
+          "depth": 3,
+          "eligible": 25194,
+          "recency": 0.06612685560053981,
+          "neural": 0.0764269270461221,
+          "fusion": 0.07196157815352862,
+          "difference": -0.004465348892593475,
+          "simultaneous_95_interval": [
+            -0.006943799002587807,
+            -0.001986898782599143
+          ]
+        },
+        {
+          "depth": 4,
+          "eligible": 26650,
+          "recency": 0.06544090056285179,
+          "neural": 0.08382739212007505,
+          "fusion": 0.07656660412757973,
+          "difference": -0.007260787992495309,
+          "simultaneous_95_interval": [
+            -0.00973923810248964,
+            -0.004782337882500978
+          ]
+        }
+      ],
+      "strata": [
+        {
+          "variable": "cohort",
+          "stratum": "repeat_only",
+          "n": 15963,
+          "fusion_minus_recency": -0.2016322897905795,
+          "fusion_minus_neural": 0.30831393860521994
+        },
+        {
+          "variable": "cohort",
+          "stratum": "unseen_only",
+          "n": 27700,
+          "fusion_minus_recency": 0.009975548590448077,
+          "fusion_minus_neural": -0.008559619484446678
+        },
+        {
+          "variable": "history_blocks",
+          "stratum": "1",
+          "n": 7626,
+          "fusion_minus_recency": 0.009734129162995079,
+          "fusion_minus_neural": -0.004960693425082486
+        },
+        {
+          "variable": "history_blocks",
+          "stratum": "2-4",
+          "n": 23175,
+          "fusion_minus_recency": -0.0723503391537354,
+          "fusion_minus_neural": 0.10902928547350742
+        },
+        {
+          "variable": "history_blocks",
+          "stratum": "5+",
+          "n": 12862,
+          "fusion_minus_recency": -0.10417096136532356,
+          "fusion_minus_neural": 0.17070366190694275
+        },
+        {
+          "variable": "target_size",
+          "stratum": "single",
+          "n": 43663,
+          "fusion_minus_recency": -0.06738734273805302,
+          "fusion_minus_neural": 0.10728795415422561
+        },
+        {
+          "variable": "agreement",
+          "stratum": "below_5",
+          "n": 28955,
+          "fusion_minus_recency": -0.07558421936604398,
+          "fusion_minus_neural": 0.1262194264088583
+        },
+        {
+          "variable": "agreement",
+          "stratum": "at_least_5",
+          "n": 14708,
+          "fusion_minus_recency": -0.051250508174313675,
+          "fusion_minus_neural": 0.07001838799071668
+        }
+      ],
+      "seed_contrasts": [
+        {
+          "seed": 42,
+          "fusion_minus_recency": -0.06419424527462694,
+          "fusion_minus_neural": 0.10562668817628465
+        },
+        {
+          "seed": 43,
+          "fusion_minus_recency": -0.0705804402014791,
+          "fusion_minus_neural": 0.10894922013216657
+        }
+      ]
+    }
+  },
+  "cpu_seconds": 40.030999999988126,
+  "gpu_seconds": 0
+}

@@ -1,0 +1,37 @@
+{
+  "fit_people": 26460,
+  "fit_queries": 90795,
+  "tune_people": 699,
+  "fit_max_target_quarter": 8059,
+  "tune_target_year": 2015,
+  "samples": {
+    "confirmation": {
+      "people": 9551,
+      "excluded_without_eligible_post2015_transition": 19442,
+      "target_year_counts": {
+        "2016": 5754,
+        "2017": 2500,
+        "2018": 1106,
+        "2019": 190,
+        "2020": 1
+      },
+      "min_target_quarter": 8064,
+      "max_target_quarter": 8080
+    },
+    "fusion": {
+      "people": 9671,
+      "excluded_without_eligible_post2015_transition": 19204,
+      "target_year_counts": {
+        "2016": 5872,
+        "2017": 2494,
+        "2018": 1107,
+        "2019": 197,
+        "2020": 1
+      },
+      "min_target_quarter": 8064,
+      "max_target_quarter": 8081
+    }
+  },
+  "original_person_partitions_disjoint": true,
+  "seconds": 61.594000000011874
+}

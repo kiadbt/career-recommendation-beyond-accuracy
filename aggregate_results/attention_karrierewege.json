@@ -1,0 +1,121 @@
+{
+  "status": "post hoc frozen architectural sensitivity; no retraining",
+  "analyses": {
+    "all_histories": {
+      "resumes": 56536,
+      "unseen_positive": 38379,
+      "models": [
+        {
+          "model": "PersonalRecency",
+          "NDCG_all": 0.2942488246392451,
+          "NDCG_unseen_positive": 0.030300238851611615,
+          "Recall_all": 0.3777239281165983
+        },
+        {
+          "model": "BiLSTM",
+          "NDCG_all": 0.143077924533325,
+          "NDCG_unseen_positive": 0.05065145554016823,
+          "Recall_all": 0.22539620772605065
+        },
+        {
+          "model": "QuarterSelfAttention",
+          "NDCG_all": 0.13969251135928842,
+          "NDCG_unseen_positive": 0.0499445774525378,
+          "Recall_all": 0.22269881137682185
+        }
+      ],
+      "attention_minus_recency": {
+        "estimates": [
+          -0.1545563132799567,
+          0.01964433860092619,
+          0.17420065188088288
+        ],
+        "simultaneous_95_intervals": [
+          [
+            -0.15762893138247372,
+            -0.15148369517743968
+          ],
+          [
+            0.016571720498409166,
+            0.022716956703443217
+          ],
+          [
+            0.17112803377836586,
+            0.1772732699833999
+          ]
+        ]
+      },
+      "seed_means": [
+        [
+          0.13896909099671204,
+          0.21962997028442055
+        ],
+        [
+          0.14041593172187494,
+          0.22576765246922315
+        ]
+      ],
+      "bootstrap_draws": 5000,
+      "bootstrap_seed": 20261018
+    },
+    "unique_nonmatching_sequences": {
+      "resumes": 43663,
+      "unseen_positive": 27700,
+      "models": [
+        {
+          "model": "PersonalRecency",
+          "NDCG_all": 0.3247689684660342,
+          "NDCG_unseen_positive": 0.024431594173161885,
+          "Recall_all": 0.4095000343540297
+        },
+        {
+          "model": "BiLSTM",
+          "NDCG_all": 0.15009367157375558,
+          "NDCG_unseen_positive": 0.04296676224805664,
+          "Recall_all": 0.2312369740970616
+        },
+        {
+          "model": "QuarterSelfAttention",
+          "NDCG_all": 0.14614373373112194,
+          "NDCG_unseen_positive": 0.041203385978647616,
+          "Recall_all": 0.22695417172434326
+        }
+      ],
+      "attention_minus_recency": {
+        "estimates": [
+          -0.17862523473491226,
+          0.016771791805485735,
+          0.195397026540398
+        ],
+        "simultaneous_95_intervals": [
+          [
+            -0.18220116588412827,
+            -0.17504930358569626
+          ],
+          [
+            0.01319586065626974,
+            0.02034772295470173
+          ],
+          [
+            0.191821095391182,
+            0.198972957689614
+          ]
+        ]
+      },
+      "seed_means": [
+        [
+          0.1461169776899416,
+          0.2260953209811511
+        ],
+        [
+          0.14617048977230726,
+          0.22781302246753543
+        ]
+      ],
+      "bootstrap_draws": 5000,
+      "bootstrap_seed": 20261019
+    }
+  },
+  "GPU_seconds": 20.890999999945052,
+  "CPU_seconds": 21.89000000001397
+}

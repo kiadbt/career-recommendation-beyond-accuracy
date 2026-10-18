@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "seed": 42,
+      "sample": "confirmation",
+      "histories": 100,
+      "CPU_GPU_top10_equal": true,
+      "padding_invariance": true
+    },
+    {
+      "seed": 42,
+      "sample": "fusion",
+      "histories": 100,
+      "CPU_GPU_top10_equal": true,
+      "padding_invariance": true
+    },
+    {
+      "seed": 43,
+      "sample": "confirmation",
+      "histories": 100,
+      "CPU_GPU_top10_equal": true,
+      "padding_invariance": true
+    },
+    {
+      "seed": 43,
+      "sample": "fusion",
+      "histories": 100,
+      "CPU_GPU_top10_equal": true,
+      "padding_invariance": true
+    },
+    {
+      "seed": 44,
+      "sample": "confirmation",
+      "histories": 100,
+      "CPU_GPU_top10_equal": true,
+      "padding_invariance": true
+    },
+    {
+      "seed": 44,
+      "sample": "fusion",
+      "histories": 100,
+      "CPU_GPU_top10_equal": true,
+      "padding_invariance": true
+    },
+    {
+      "seed": 45,
+      "sample": "confirmation",
+      "histories": 100,
+      "CPU_GPU_top10_equal": true,
+      "padding_invariance": true
+    },
+    {
+      "seed": 45,
+      "sample": "fusion",
+      "histories": 100,
+      "CPU_GPU_top10_equal": true,
+      "padding_invariance": true
+    },
+    {
+      "seed": 46,
+      "sample": "confirmation",
+      "histories": 100,
+      "CPU_GPU_top10_equal": true,
+      "padding_invariance": true
+    },
+    {
+      "seed": 46,
+      "sample": "fusion",
+      "histories": 100,
+      "CPU_GPU_top10_equal": true,
+      "padding_invariance": true
+    }
+  ],
+  "GPU_seconds": 0
+}

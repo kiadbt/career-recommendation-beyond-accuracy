@@ -1,0 +1,48 @@
+{
+  "preprocessing": {
+    "jobhop": {
+      "raw_source_reconstruction_matches_all_query_arrays": true,
+      "histories": 28993
+    },
+    "decorte": {
+      "raw_source_reconstruction_matches_all_query_arrays": true,
+      "histories": 227
+    },
+    "karrierewege": {
+      "raw_source_reconstruction_matches_all_query_arrays": true,
+      "unique_nonmatching_indices_match": true,
+      "histories": 56536
+    }
+  },
+  "evaluation": {
+    "JobHop": {
+      "all_history_metric_replay_passed": true,
+      "bootstrap_recomputed": false,
+      "histories": 28993
+    },
+    "Decorte": {
+      "all_history_metric_replay_passed": true,
+      "bootstrap_recomputed": false,
+      "histories": 227
+    },
+    "KARRIEREWEGE": {
+      "all_history_metric_replay_passed": true,
+      "bootstrap_recomputed": true,
+      "histories": 56536,
+      "unique_sequence_bootstrap_recomputed": true
+    },
+    "portable_CPU_inference_matches_saved_GPU_rankings_17_histories": true,
+    "portable_recency_matches_all_56536_rankings": true,
+    "additional_GPU_seconds": 0
+  },
+  "frozen_external_inference": {
+    "independent_scalar_metrics_all_histories": true,
+    "independent_cohort_assignment": true,
+    "frozen_input_hashes_unchanged": true,
+    "padding_and_batch_invariance": true,
+    "optimizer_steps": 0
+  },
+  "raw_data_to_training_reproduction": false,
+  "user_level_assets_included": false,
+  "published": false
+}

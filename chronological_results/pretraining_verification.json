@@ -1,0 +1,10 @@
+{
+  "strict_calendar_bounds": true,
+  "person_partitions_disjoint": true,
+  "within_history_ordering": true,
+  "training_weights_sum_to_one_per_history": true,
+  "script_hashes": {
+    "prepare.py": "1d58bd11648554af30f1305b517eadbddef3b3defa9b0b01292745d27ba11f07",
+    "run.py": "45ddfba5c1fad2c92618c03a44cc31f9d405b1e59df389520e0d12c05846220d"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "independently_reconstructed_queries": {
+    "fit": 200,
+    "tune": 200,
+    "confirmation": 200,
+    "fusion": 200
+  },
+  "raw_dates_histories_and_target_sets_match": true,
+  "first_eligible_tuning_and_evaluation_targets_verified": true
+}

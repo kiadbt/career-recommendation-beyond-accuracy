@@ -1,0 +1,94 @@
+{
+  "resumes": 227,
+  "repeat_support": 68,
+  "new_group_support": 107,
+  "contrasts": {
+    "NDCG_vs_recency": {
+      "estimate": 0.04232239517308405,
+      "simultaneous_95_interval": [
+        -0.009160280655088934,
+        0.09380507100125704
+      ]
+    },
+    "NDCG_vs_BiLSTM": {
+      "estimate": 0.03936345714653408,
+      "simultaneous_95_interval": [
+        -0.012119218681638906,
+        0.09084613297470706
+      ]
+    },
+    "repeat_Recall_vs_recency": {
+      "estimate": 0.0,
+      "simultaneous_95_interval": [
+        -0.05148267582817299,
+        0.05148267582817299
+      ]
+    },
+    "new_group_Recall_vs_BiLSTM": {
+      "estimate": -0.04672897196261682,
+      "simultaneous_95_interval": [
+        -0.09821164779078981,
+        0.004753703865556166
+      ]
+    },
+    "neural_minus_recency_all": {
+      "estimate": 0.0029589380265499744,
+      "simultaneous_95_interval": [
+        -0.048523737801623015,
+        0.05444161385472296
+      ]
+    },
+    "neural_minus_recency_unseen": {
+      "estimate": 0.13682295303630063,
+      "simultaneous_95_interval": [
+        0.08534027720812765,
+        0.1883056288644736
+      ]
+    },
+    "cohort_shift": {
+      "estimate": 0.13386401500975065,
+      "simultaneous_95_interval": [
+        0.08238133918157767,
+        0.18534669083792363
+      ]
+    }
+  },
+  "models": [
+    {
+      "model": "PersonalRecency",
+      "NDCG": 0.25757467860200295,
+      "repeat_Recall": 1.0,
+      "new_group_Recall": 0.04672897196261682,
+      "cohort_NDCG": {
+        "mixed": 0.6131471927654584,
+        "repeat_only": 0.8133848950491664,
+        "unseen_only": 0.021129036991163856
+      },
+      "full_Recall": 0.3370044052863436
+    },
+    {
+      "model": "BiLSTM",
+      "NDCG": 0.2605336166285529,
+      "repeat_Recall": 0.6985294117647058,
+      "new_group_Recall": 0.2383177570093458,
+      "cohort_NDCG": {
+        "mixed": 0.2624905166004467,
+        "repeat_only": 0.49666857335093867,
+        "unseen_only": 0.16101789964508278
+      },
+      "full_Recall": 0.40748898678414097
+    },
+    {
+      "model": "Fusion",
+      "NDCG": 0.2998970737750869,
+      "repeat_Recall": 1.0,
+      "new_group_Recall": 0.19158878504672897,
+      "cohort_NDCG": {
+        "mixed": 0.3467132018086354,
+        "repeat_only": 0.7434920328938892,
+        "unseen_only": 0.11267897069965743
+      },
+      "full_Recall": 0.4669603524229075
+    }
+  ]
+}

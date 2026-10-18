@@ -1,0 +1,23 @@
+{
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "checkpoint_sha256": {
+    "42": "9ec5ef4105ce358b33632b78c3c3ff292c8380acd377359fe711778cef5453c9",
+    "43": "4547b3768eaf0ee7ba5c23b17adfbb85f2406bdce9d5dfb076a5e8a927290e67",
+    "44": "3d46ca28465dd623d29e14ebc3a15fa964f2ec9ac5502220295a1b4a410d7891",
+    "45": "ecf3bf205356a92fa2e5c8a6f1b09eade40c8841abe683509eb46e8cfe52aecf",
+    "46": "6771c3d6fa816c03719eab04a9ba0e1617200302bd7a03a8e1e073011a445be9"
+  },
+  "count_model_sha256": "c0773b0c76fca7787d5cc0e47e71790ecf2dbc406a0ac59235725498adff3318",
+  "fitting_cutoff": "2014 Q4",
+  "tuning_year": 2015,
+  "all_stopping_adequacy_checks_pass": true,
+  "protocol_sha256": "b2b2b0d719882cb5605664e2ca761a1e8c6cc4732c7422f0fffa90f3ac9a176f",
+  "training_query_sha256": "05295bd668c87e5842d5a84ca1dfaaa4397f048104aa515fda5cc8b471dfde42",
+  "architecture_fixed_before_experiment": true
+}

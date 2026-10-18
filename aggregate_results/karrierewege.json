@@ -1,0 +1,217 @@
+{
+  "status": "prospectively specified external evaluation in a sequentially developed study",
+  "task": "ordered-experience singleton-target transfer",
+  "support": {
+    "source_rows": 247247,
+    "source_histories": 56850,
+    "eligible_histories": 56536,
+    "excluded": {
+      "unmapped_or_ambiguous_label": 309,
+      "nonconsecutive_or_duplicate_order": 5
+    },
+    "whole_history_mapping_coverage": 0.9945646437994723,
+    "row_mapping_coverage": 0.9984145409246624,
+    "unmapped_unique_labels": 16,
+    "columns": [
+      "_id",
+      "experience_order",
+      "preferredLabel_en",
+      "preferredLabel_de",
+      "description_en",
+      "description_de",
+      "preferredLabel_skills",
+      "skills"
+    ],
+    "unique_complete_sequences": 43894,
+    "duplicate_sequence_histories": 12642,
+    "exact_JobHop_fit_sequence_matches": 1140,
+    "exact_Decorte_test_sequence_matches": 1,
+    "sensitivity_histories": 43663,
+    "max_history_length": 28,
+    "task": "ordered experience sequence with singleton target; dates unavailable",
+    "broad_validation_admitted": true,
+    "queries_sha256": "47a11b3fcbe9ff27fe60f9377f949f7e38b54c4f6d4ad0d51a238ffea508c571"
+  },
+  "analyses": {
+    "all_histories": {
+      "resumes": 56536,
+      "unseen_positive": 38379,
+      "repeat_support": 18157,
+      "broader_support": 31376,
+      "models": [
+        {
+          "model": "PersonalRecency",
+          "NDCG": 0.2942488246392451,
+          "full_Recall": 0.3777239281165983,
+          "unseen_NDCG": 0.030300238851611615,
+          "repeat_Recall": 0.9999449248223825,
+          "new_group_Recall": 0.07620474247832738
+        },
+        {
+          "model": "BiLSTM",
+          "NDCG": 0.143077924533325,
+          "full_Recall": 0.22539620772605065,
+          "unseen_NDCG": 0.05065145554016823,
+          "repeat_Recall": 0.4809990637219805,
+          "new_group_Recall": 0.08058707292197859
+        },
+        {
+          "model": "Fusion",
+          "NDCG": 0.23554876037360578,
+          "full_Recall": 0.3884339182114051,
+          "unseen_NDCG": 0.04180437842043839,
+          "repeat_Recall": 0.9966404141653357,
+          "new_group_Recall": 0.08414074451810301
+        }
+      ],
+      "contrasts": {
+        "NDCG_vs_recency": {
+          "estimate": -0.058700064265641796,
+          "simultaneous_95_interval": [
+            -0.06179463163889575,
+            -0.05560549689238784
+          ]
+        },
+        "NDCG_vs_BiLSTM": {
+          "estimate": 0.09247083584027373,
+          "simultaneous_95_interval": [
+            0.08937626846701978,
+            0.09556540321352767
+          ]
+        },
+        "repeat_Recall_vs_recency": {
+          "estimate": -0.003304510657046869,
+          "simultaneous_95_interval": [
+            -0.006399078030300823,
+            -0.0002099432837929147
+          ]
+        },
+        "new_group_Recall_vs_BiLSTM": {
+          "estimate": 0.0035536715961244263,
+          "simultaneous_95_interval": [
+            0.0004591042228704722,
+            0.00664823896937838
+          ]
+        },
+        "neural_minus_recency_all": {
+          "estimate": -0.1511709001059282,
+          "simultaneous_95_interval": [
+            -0.15426546747918216,
+            -0.14807633273267426
+          ]
+        },
+        "neural_minus_recency_unseen": {
+          "estimate": 0.020351216688556877,
+          "simultaneous_95_interval": [
+            0.01725664931530292,
+            0.02344578406181083
+          ]
+        },
+        "cohort_shift": {
+          "estimate": 0.1715221167944851,
+          "simultaneous_95_interval": [
+            0.16842754942123114,
+            0.17461668416773904
+          ]
+        }
+      },
+      "simultaneous_radius": 0.003094567373253954,
+      "bootstrap_seed": 20261016,
+      "bootstrap_draws": 5000,
+      "material_aggregate_superiority": false,
+      "both_specialised_safeguards_retained": true,
+      "material_cohort_shift": true
+    },
+    "unique_nonmatching_sequences": {
+      "resumes": 43663,
+      "unseen_positive": 27700,
+      "repeat_support": 15963,
+      "broader_support": 22403,
+      "models": [
+        {
+          "model": "PersonalRecency",
+          "NDCG": 0.3247689684660342,
+          "full_Recall": 0.4095000343540297,
+          "unseen_NDCG": 0.024431594173161885,
+          "repeat_Recall": 0.9999373551337468,
+          "new_group_Recall": 0.0640092844708298
+        },
+        {
+          "model": "BiLSTM",
+          "NDCG": 0.15009367157375558,
+          "full_Recall": 0.2312369740970616,
+          "unseen_NDCG": 0.04296676224805664,
+          "repeat_Recall": 0.47478544133308276,
+          "new_group_Recall": 0.06704459224211043
+        },
+        {
+          "model": "Fusion",
+          "NDCG": 0.2573816257279812,
+          "full_Recall": 0.4164395483590225,
+          "unseen_NDCG": 0.03440714276360997,
+          "repeat_Recall": 0.9961786631585542,
+          "new_group_Recall": 0.06657590501272151
+        }
+      ],
+      "contrasts": {
+        "NDCG_vs_recency": {
+          "estimate": -0.06738734273805522,
+          "simultaneous_95_interval": [
+            -0.07098467029235712,
+            -0.06379001518375331
+          ]
+        },
+        "NDCG_vs_BiLSTM": {
+          "estimate": 0.10728795415421885,
+          "simultaneous_95_interval": [
+            0.10369062659991694,
+            0.11088528170852076
+          ]
+        },
+        "repeat_Recall_vs_recency": {
+          "estimate": -0.003758691975192633,
+          "simultaneous_95_interval": [
+            -0.00735601952949454,
+            -0.0001613644208907257
+          ]
+        },
+        "new_group_Recall_vs_BiLSTM": {
+          "estimate": -0.00046868722938892113,
+          "simultaneous_95_interval": [
+            -0.004066014783690828,
+            0.003128640324912986
+          ]
+        },
+        "neural_minus_recency_all": {
+          "estimate": -0.17467529689228486,
+          "simultaneous_95_interval": [
+            -0.17827262444658676,
+            -0.17107796933798297
+          ]
+        },
+        "neural_minus_recency_unseen": {
+          "estimate": 0.018535168074894887,
+          "simultaneous_95_interval": [
+            0.01493784052059298,
+            0.022132495629196794
+          ]
+        },
+        "cohort_shift": {
+          "estimate": 0.19321046496717975,
+          "simultaneous_95_interval": [
+            0.18961313741287783,
+            0.19680779252148167
+          ]
+        }
+      },
+      "simultaneous_radius": 0.0035973275543019073,
+      "bootstrap_seed": 20261017,
+      "bootstrap_draws": 5000,
+      "material_aggregate_superiority": false,
+      "both_specialised_safeguards_retained": true,
+      "material_cohort_shift": true
+    }
+  },
+  "GPU_seconds": 70.89100000006147,
+  "CPU_seconds": 22.53200000000652
+}

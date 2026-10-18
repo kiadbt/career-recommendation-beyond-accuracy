@@ -1,0 +1,94 @@
+{
+  "primary_neural": "BiLSTM",
+  "primary_control": "PersonalRecency",
+  "primary_NDCG_contrast": {
+    "estimates": {
+      "G_all": -0.0003291583772192139,
+      "G_unseen_positive": 0.057731141475302686,
+      "Delta_cohort": 0.0580602998525219
+    },
+    "simultaneous_95_intervals": {
+      "G_all": [
+        -0.0035758320331872703,
+        0.002917515278748843
+      ],
+      "G_unseen_positive": [
+        0.05448446781933463,
+        0.06097781513127074
+      ],
+      "Delta_cohort": [
+        0.05481362619655385,
+        0.06130697350848996
+      ]
+    },
+    "bootstrap_draws": 5000,
+    "bootstrap_seed": 20261018,
+    "simultaneous_radius": 0.0032466736559680566,
+    "material_rank_reversal_supported": false,
+    "material_contrast_shift_supported": true
+  },
+  "confirmation_resumes": 28993,
+  "unseen_positive_resumes": 22034,
+  "all_model_panel": [
+    {
+      "model": "Popularity",
+      "NDCG_all": 0.11419673267987489,
+      "NDCG_unseen_positive": 0.08954953188437707,
+      "Recall_all": 0.2004692429864023,
+      "Recall_unseen_positive": 0.16320405261133225,
+      "NDCG_repeat_only": 0.1922361668411048,
+      "NDCG_unseen_only": 0.08786937075233481,
+      "NDCG_mixed": 0.1443033195075471
+    },
+    {
+      "model": "PersonalRecency",
+      "NDCG_all": 0.2409109010161353,
+      "NDCG_unseen_positive": 0.06466292056491392,
+      "Recall_all": 0.35083254907177924,
+      "Recall_unseen_positive": 0.14594209382037285,
+      "NDCG_repeat_only": 0.7989577470086934,
+      "NDCG_unseen_only": 0.051584237660336825,
+      "NDCG_mixed": 0.4908764619277936
+    },
+    {
+      "model": "QuarterTransition",
+      "NDCG_all": 0.21556897944651693,
+      "NDCG_unseen_positive": 0.09663612936628538,
+      "Recall_all": 0.3159423949623308,
+      "Recall_unseen_positive": 0.19203433438365813,
+      "NDCG_repeat_only": 0.5921412482592517,
+      "NDCG_unseen_only": 0.08765267564720604,
+      "NDCG_mixed": 0.3893926440103074
+    },
+    {
+      "model": "HistoryNeighbour",
+      "NDCG_all": 0.2062159982330778,
+      "NDCG_unseen_positive": 0.08176611853081193,
+      "Recall_all": 0.29715255570720683,
+      "Recall_unseen_positive": 0.155321051448627,
+      "NDCG_repeat_only": 0.6002566146089544,
+      "NDCG_unseen_only": 0.07216378693054731,
+      "NDCG_mixed": 0.39469088217480114
+    },
+    {
+      "model": "MLP",
+      "NDCG_all": 0.2399711932567987,
+      "NDCG_unseen_positive": 0.10022891167752111,
+      "Recall_all": 0.3558722918339895,
+      "Recall_unseen_positive": 0.19795416283060377,
+      "NDCG_repeat_only": 0.6824315226601328,
+      "NDCG_unseen_only": 0.08892320355790669,
+      "NDCG_mixed": 0.46866401561215043
+    },
+    {
+      "model": "BiLSTM",
+      "NDCG_all": 0.2405817426389161,
+      "NDCG_unseen_positive": 0.1223940620402166,
+      "Recall_all": 0.3688346981948023,
+      "Recall_unseen_positive": 0.2360764154531741,
+      "NDCG_repeat_only": 0.6147946114867024,
+      "NDCG_unseen_only": 0.11301435829567393,
+      "NDCG_mixed": 0.42806373681282855
+    }
+  ]
+}

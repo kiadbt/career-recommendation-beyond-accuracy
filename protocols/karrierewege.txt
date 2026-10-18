@@ -1,0 +1,53 @@
+KARRIEREWEGE external sequence-transfer evaluation — 14 October 2026
+
+Specified after JobHop and Decorte results, before downloading or scoring the
+KARRIEREWEGE test archive. Public training viewer and dataset paper inspected.
+Source: ElenaSenger/Karrierewege, revision e69e98a0f00f75a7ea1a1fb09936ae46105f6c8d.
+Test archive: karierrewege_test.zip; expected SHA256
+bea35f3ff82435b8b6c21e1a66248a43128cd64a204ba872a23657b2c415dde9.
+Original employment-agency occupation sequences; not KARRIEREWEGE+ synthetic text.
+The source uses ESCO 1.2.0 whereas our fixed catalogue derives from ESCO 1.1.1.
+
+Map preferredLabel_en by unique exact catalogue preferred label, after Unicode
+NFKC normalisation, whitespace collapse and case folding. No fuzzy mapping,
+new annotations, test-trained crosswalk, or catalogue expansion. Exclude the
+entire history if any label is unmapped/ambiguous. Report coverage and exclusions.
+Group by source _id, sort by integer experience_order, reject conflicting or
+duplicate order entries, require >=2 records and consecutive order starting 0.
+Keep consecutive repeated occupations. Use each earlier experience as a singleton
+input block and the final experience as a singleton target. Do not invent dates
+or treat experiences as observed quarters. Report as external sequence transfer,
+not exact replication of the multi-positive quarter task or cross-domain study.
+Use every eligible official-test history; no sampling by outcome or model score.
+If fewer than 5000 histories or <90% whole-history mapping coverage remain,
+report limited coverage explicitly and do not call it a broad external validation.
+
+Frozen original PersonalRecency counts, both selected BiLSTM checkpoints and
+equal-weight RRF (constant60, input/output top10). No retraining, tuning, target
+popularity estimation, hyperparameter changes or attention-based fusion. Same
+3007 candidate codes, embedding bank, ascending-code tie break. Embeddings for
+singleton blocks use the existing catalogue history embeddings, L2 normalised
+as in the original bank construction. All model-input blocks precede target.
+GPU inference wall-time cap 300seconds, allocation ceiling4.5GiB, batch128,
+2CPU threads. No optimiser steps. Preserve hashes before acquisition/scoring.
+
+Primary seven-contrast family: fusion minus recency NDCG; fusion minus BiLSTM
+NDCG; fusion minus recency repeated-target Recall; fusion minus BiLSTM broader-
+target Recall; BiLSTM minus recency NDCG overall and unseen-positive; cohort shift.
+Broader targets use the same first-two-digit ISCO groups absent from all history.
+5000 paired-resume multinomial bootstrap draws, seed20261016, common maximum
+absolute centred deviation radius across seven contrasts. Seed-average within
+resume before inference. Full NDCG and Recall@10 use singleton target sets.
+Reference margins: +.005 aggregate superiority, -.01 recall retention, ±.01
+cohort shift/aggregate practical similarity. Report uncertainty whether favourable
+or not. This is a new external sample in a sequentially developed study.
+
+Independence audit: distinct source provenance does not prove person independence.
+Compare exact ordered code-set signatures against JobHop fitting final queries
+and Decorte test; report matches without inferring same people. Quantify duplicate
+complete sequences within KARRIEREWEGE. Prespecified sensitivity: retain one ID
+per exact sequence (ascending ID), exclude signatures matching either reference,
+repeat seven contrasts/5000 bootstrap using seed20261017, separate family. Report
+both results without choosing the more favourable one. No raw or per-user data
+will be redistributed. Local use of public release does not establish a licence
+to redistribute it; repository metadata contains no explicit dataset licence.
